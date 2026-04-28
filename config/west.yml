@@ -4,6 +4,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: beekeeb
+      url-base: https://github.com/beekeeb
     - name: janpfischer
       url-base: https://github.com/janpfischer
   projects:

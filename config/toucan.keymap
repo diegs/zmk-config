@@ -1,16 +1,5 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
-//                                                        █   █  █  █   █  █  █   █  █  █   █
-//                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
-//                                                               █      ▄▄▄█▄▄▄    █   █  
-//                                                               ▀      █  █  █     █▄█
-//                                                             ▀▀▀▀▀    █  █  █      ▀
-//                                                                      ▀  ▀  ▀
-//
-// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 #define BASE 0
@@ -71,10 +60,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-           &kp B        &kp F            &kp L         &kp K         &kp Q      &kp P     &kp G          &kp O         &kp U        &kp PERIOD
-           &hml LGUI N  &hml LEFT_ALT S  &hml LCTRL H  &hml LSHFT T  &kp M      &kp Y     &hmr RSHIFT C  &hmr RCTRL A  &hmr RALT E  &hmr RGUI I
-&kp GRAVE  &kp X        &kp V            &kp J         &kp D         &kp Z      &kp SQT   &kp W          &kp SLASH     &kp SEMI     &kp COMMA    &kp BSLH
-                                         &kp LGUI      &lt 2 R       &kp TAB    &kp BSPC  &lt 1 SPACE    &gresc
+           &kp Q         &kp W            &kp E        &kp R         &kp T        &kp Y    &kp U          &kp I        &kp O        &kp P
+           &hml LCTRL A  &hml LEFT_ALT S  &hml LGUI D  &hml LSHFT F  &kp G        &kp H    &hmr RSHIFT J  &hmr RGUI K  &hmr RALT L  &hmr RCTRL SEMI
+&kp GRAVE  &kp Z         &kp X            &kp C        &kp V         &kp B        &kp N    &kp M          &kp COMMA    &kp DOT      &kp SLASH        &kp BSLH
+                                          &gresc       &lt 2 TAB     &kp SPACE    &kp RET  &lt 1 APOS     &kp BSPC
             >;
         };
 
@@ -97,10 +86,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL  &kp AT  &kp HASH  &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
-        &kp N1    &kp N2  &kp N3    &kp N4     &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
-&kp F1  &kp F2    &kp F3  &kp F4    &kp F5     &kp F6       &kp F7     &kp F8    &kp F9    &kp F10   &kp F11   &kp F12
-                          &trans    &kp MINUS  &kp EQUAL    &trans     &trans    &trans
+        &kp EXCL  &kp AT  &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS  &kp STAR  &kp LPAR  &kp RPAR
+        &kp N1    &kp N2  &kp N3     &kp N4     &kp N5       &kp N6     &kp N7    &kp N8    &kp N9    &kp N0
+&trans  &kp F1    &kp F2  &kp F3     &kp F4     &kp F5       &kp F6     &kp F7    &kp F8    &kp F9    &kp F10   &trans
+                          &kp TILDE  &kp MINUS  &kp EQUAL    &kp F11    &trans    &kp F12
             >;
         };
 
@@ -123,10 +112,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-         &trans   &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &trans    &trans   &kp HOME   &trans    &kp END    &trans
-         &trans   &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans    &trans   &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
-&kp F13  &kp F23  &kp F24     &kp F14           &kp F15       &trans    &trans   &kp PG_UP  &trans    &kp PG_DN  &trans     &trans
-                              &trans            &trans        &trans    &kp DEL  &kp ENTER  &trans
+        &trans   &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP  &trans        &trans  &kp HOME   &trans    &kp END    &trans
+        &kp F13  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT    &trans        &trans  &kp LEFT   &kp DOWN  &kp UP     &kp RIGHT
+&trans  &kp F23  &kp F24     &kp F14           &kp F15       &trans        &trans  &kp PG_UP  &trans    &kp PG_DN  &trans     &trans
+                             &bt BT_PRV        &trans        &bt BT_NXT    &trans  &trans     &kp DEL
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
