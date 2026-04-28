@@ -9,5 +9,13 @@ include:
     shield: totem_dongle dongle_screen
     artifact_name: totem-dongle
   - board: seeeduino_xiao_ble
+    shield: toucan_left rgbled_adapter nice_view_gem
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact_name: toucan-left
+  - board: seeeduino_xiao_ble
+    shield: toucan_right rgbled_adapter
+    artifact_name: toucan-right
+  - board: seeeduino_xiao_ble
     shield: settings_reset
-    artifact_name: totem-settings-reset
+    artifact_name: settings-reset

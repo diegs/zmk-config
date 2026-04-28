@@ -13,5 +13,12 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
+    # Toucan keyboard support
+    - name: zmk-keyboard-toucan
+      remote: beekeeb
+      revision: main
+      import: config/west.yml 
+      path: modules/zmk-keyboard-toucan 
+
   self:
     path: config
