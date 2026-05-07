@@ -1,4 +1,11 @@
 / {
-    /delete-node/ split_inputs;
-    /delete-node/ glidepoint_listener;
+    split_inputs {
+        glidepoint_split@0 {
+            status = "disabled";
+        };
+    };
+
+    glidepoint_listener {
+        status = "disabled";
+    };
 };
