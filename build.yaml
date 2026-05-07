@@ -23,5 +23,5 @@ include:
     shield: toucan_dongle
     artifact_name: toucan-dongle
   - board: raytac_mdbt50q_rx
-    shield: raytac_settings_reset
+    shield: settings_reset
     artifact_name: raytac-settings-reset
