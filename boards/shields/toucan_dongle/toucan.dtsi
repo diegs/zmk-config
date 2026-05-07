@@ -3,24 +3,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &default_layout;
-    };
-
-    kscan0: kscan_0 {
-        compatible = "zmk,kscan-gpio-matrix";
-        diode-direction = "col2row";
-        wakeup-source;
-
-    row-gpios
-    = <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-    ;
-    };
-
     default_layout: default_layout {
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
