@@ -1,5 +1,0 @@
-/ {
-    chosen {
-        zmk,matrix-transform = &totem_42_transform;
-    };
-};
