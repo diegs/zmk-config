@@ -13,4 +13,4 @@
 k20    k21 k22 k23 k24 k25    k26 k27 k28 k29 k30 k31 \
             t0  t1  t2     t3  t4  t5
 
-#include "shared.dtsi"
+#include "shared.keymap"
