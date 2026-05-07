@@ -1,7 +1,8 @@
+#include "toucan.dtsi"
+
 / {
     chosen {
         zmk,kscan = &mock_kscan;
-        zmk,matrix-transform = &totem_42_transform;
     };
 
     mock_kscan: kscan_0 {

@@ -29,7 +29,7 @@
         >;
     };
 
-    #if defined(SHIELD_TOTEM_LEFT) || defined(SHIELD_TOTEM_RIGHT) || defined(SHIELD_TOTEM_DONGLE)
+    #if defined(SHIELD_TOTEM_LEFT) || defined(SHIELD_TOTEM_RIGHT) || defined(SHIELD_TOTEM_DONGLE) || defined(SHIELD_TOUCAN_DONGLE)
     chosen {
         zmk,matrix-transform = &totem_42_transform;
     };
