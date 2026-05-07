@@ -19,3 +19,9 @@ include:
   - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact_name: settings-reset
+  - board: raytac_mdbt50q_rx
+    shield: toucan_dongle
+    artifact_name: toucan-dongle
+  - board: raytac_mdbt50q_rx
+    shield: raytac_settings_reset
+    artifact_name: raytac-settings-reset
