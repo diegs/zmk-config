@@ -1,0 +1,7 @@
+&glidepoint_split {
+    status = "disabled";
+};
+
+&glidepoint_listener {
+    status = "disabled";
+};
