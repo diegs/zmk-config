@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/beekeeb
     - name: janpfischer
       url-base: https://github.com/janpfischer
+    - name: rschenk
+      url-base: https://github.com/rschenk
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,12 +17,14 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
-    # Toucan keyboard support
+    - name: zmk-component-raytac-dongle
+      remote: rschenk
+      revision: main
+      path: modules/zmk-component-raytac-dongle
     - name: zmk-keyboard-toucan
       remote: beekeeb
       revision: main
       import: config/west.yml 
       path: modules/zmk-keyboard-toucan 
-
   self:
     path: config
