@@ -19,7 +19,7 @@ manifest:
       revision: main
     - name: zmk-component-raytac-dongle
       remote: rschenk
-      revision: main
+      revision: v0.3
       path: modules/zmk-component-raytac-dongle
     - name: zmk-keyboard-toucan
       remote: beekeeb
