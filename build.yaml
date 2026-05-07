@@ -1,24 +1,20 @@
 include:
   - board: seeeduino_xiao_ble
     shield: totem_left
-    cmake-args: -DZMK_CONFIG_KSC_DTS=config/shared.keymap
     artifact_name: totem-left
   - board: seeeduino_xiao_ble
     shield: totem_right
-    cmake-args: -DZMK_CONFIG_KSC_DTS=config/shared.keymap
     artifact_name: totem-right
   - board: seeeduino_xiao_ble
     shield: totem_dongle dongle_screen
-    cmake-args: -DZMK_CONFIG_KSC_DTS=config/shared.keymap
     artifact_name: totem-dongle
   - board: seeeduino_xiao_ble
     shield: toucan_left rgbled_adapter nice_view_gem
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DZMK_CONFIG_KSC_DTS=config/shared.keymap
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact_name: toucan-left
   - board: seeeduino_xiao_ble
     shield: toucan_right rgbled_adapter
-    cmake-args: -DZMK_CONFIG_KSC_DTS=config/shared.keymap
     artifact_name: toucan-right
   - board: seeeduino_xiao_ble
     shield: settings_reset

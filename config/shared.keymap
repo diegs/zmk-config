@@ -28,6 +28,12 @@
         >;
     };
 
+    #if defined(SHIELD_TOTEM_LEFT) || defined(SHIELD_TOTEM_RIGHT) || defined(SHIELD_TOTEM_DONGLE)
+    chosen {
+        zmk,matrix-transform = &totem_42_transform;
+    };
+    #endif
+
     behaviors {
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
