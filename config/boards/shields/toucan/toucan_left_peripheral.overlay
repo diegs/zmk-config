@@ -1,4 +1,11 @@
-#include "toucan.dtsi"
+#include "toucan_common.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &default_layout;
+    };
+};
 
 &pinctrl {
     spi0_default: spi0_default {

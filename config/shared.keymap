@@ -29,9 +29,15 @@
         >;
     };
 
-    #if defined(SHIELD_TOTEM_LEFT) || defined(SHIELD_TOTEM_RIGHT) || defined(SHIELD_TOTEM_DONGLE) || defined(SHIELD_TOUCAN_DONGLE)
+    #if defined(SHIELD_TOTEM_LEFT) || defined(SHIELD_TOTEM_RIGHT) || defined(SHIELD_TOTEM_DONGLE)
     chosen {
         zmk,matrix-transform = &totem_42_transform;
+    };
+    #endif
+
+    #if defined(SHIELD_TOUCAN_DONGLE) || defined(SHIELD_TOUCAN_LEFT_PERIPHERAL)
+    chosen {
+        zmk,matrix-transform = &toucan_42_transform;
     };
     #endif
 
