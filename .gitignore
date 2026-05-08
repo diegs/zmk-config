@@ -1,0 +1,14 @@
+.build/
+.direnv/
+.west/
+zmk/
+modules/
+zephyr/
+zmk-dongle-screen/
+zmk-rgbled-widget/
+cirque-input-module/
+firmware/
+draw/
+node_modules/
+*.uf2
+*.bin
