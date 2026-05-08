@@ -10,6 +10,10 @@ manifest:
       url-base: https://github.com/janpfischer
     - name: rschenk
       url-base: https://github.com/rschenk
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+    - name: geeksville
+      url-base: https://github.com/geeksville
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -17,6 +21,7 @@ manifest:
     - name: zmk-dongle-screen
       remote: janpfischer
       revision: main
+      path: modules/zmk-dongle-screen
     - name: zmk-component-raytac-dongle
       remote: rschenk
       path: modules/zmk-component-raytac-dongle
@@ -25,5 +30,13 @@ manifest:
       revision: main
       import: config/west.yml 
       path: modules/zmk-keyboard-toucan 
+    - name: cirque-input-module
+      remote: geeksville
+      revision: toucan
+      path: modules/cirque-input-module
+    - name: zmk-rgbled-widget
+      remote: caksoylar
+      revision: v0.3
+      path: modules/zmk-rgbled-widget
   self:
     path: config

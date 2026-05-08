@@ -2,7 +2,7 @@ default:
     @just --list --unsorted
 
 config := absolute_path('config')
-build := absolute_path('.build')
+build := absolute_path('build')
 out := absolute_path('firmware')
 draw := absolute_path('draw')
 
