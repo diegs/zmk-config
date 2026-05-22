@@ -9,7 +9,8 @@
         transform = <&default_transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
-            = <&key_physical_attrs 106 100   78  152 (-1000)   130   202>
+            = <&key_physical_attrs 0   0    0    0       0     0     0> // Index 0 (Filler)
+            , <&key_physical_attrs 106 100   78  152 (-1000)   130   202>
             , <&key_physical_attrs 106 100  196   60  (-400)   249   110>
             , <&key_physical_attrs 106 100  318    0       0     0     0>
             , <&key_physical_attrs 106 100  423   50       0     0     0>
@@ -19,6 +20,8 @@
             , <&key_physical_attrs 106 100 1080    0       0     0     0>
             , <&key_physical_attrs 106 100 1201   61     400  1254   111>
             , <&key_physical_attrs 106 100 1320  152    1000  1373   202>
+            , <&key_physical_attrs 0   0    0    0       0     0     0> // Index 11 (Filler)
+            , <&key_physical_attrs 0   0    0    0       0     0     0> // Index 12 (Filler)
             , <&key_physical_attrs 106 100   95  250 (-1000)   148   300>
             , <&key_physical_attrs 106 100  203  160  (-400)   256   210>
             , <&key_physical_attrs 106 100  318  100       0     0     0>
@@ -29,6 +32,7 @@
             , <&key_physical_attrs 106 100 1080  100       0     0     0>
             , <&key_physical_attrs 106 100 1194  160     400  1247   210>
             , <&key_physical_attrs 106 100 1303  250    1000  1356   300>
+            , <&key_physical_attrs 0   0    0    0       0     0     0> // Index 23 (Filler)
             , <&key_physical_attrs 106 100    0  323 (-1000)    53   373>
             , <&key_physical_attrs 106 100  112  349 (-1000)   165   399>
             , <&key_physical_attrs 106 100  210  260  (-400)   263   310>
