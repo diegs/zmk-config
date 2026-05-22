@@ -1,0 +1,70 @@
+#include "toucan_common.dtsi"
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &default_layout;
+    };
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
+                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+            low-power-enable;
+        };
+    };
+};
+
+&spi0 {
+    status = "okay";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+    cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
+
+    trackpad: pinnacle@0 {
+        compatible = "cirque,pinnacle";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
+    };
+};
+
+/ {
+    trackpad_relay_node {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        trackpad_relay: trackpad_relay@0 {
+            compatible = "zmk,input-split";
+            device = <&trackpad>;
+            reg = <0>;
+        };
+    };
+};
+
+&xiao_i2c {
+    status = "disabled";
+};
+
+&kscan0 {
+    col-gpios
+    = <&gpio0 10 GPIO_ACTIVE_HIGH>
+    , <&gpio0 5 GPIO_ACTIVE_HIGH>
+    , <&gpio1 11 GPIO_ACTIVE_HIGH>
+    , <&gpio1 12 GPIO_ACTIVE_HIGH>
+    , <&gpio0 9 GPIO_ACTIVE_HIGH>
+    , <&gpio0 4 GPIO_ACTIVE_HIGH>
+    ;
+};

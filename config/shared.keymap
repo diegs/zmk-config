@@ -35,7 +35,7 @@
     };
     #endif
 
-    #if defined(SHIELD_TOUCAN_DONGLE) || defined(SHIELD_TOUCAN_LEFT_PERIPHERAL)
+    #if defined(SHIELD_TOUCAN_DONGLE) || defined(SHIELD_TOUCAN_LEFT_PERIPHERAL) || defined(SHIELD_TOUCAN_RIGHT_PERIPHERAL)
     chosen {
         zmk,matrix-transform = &toucan_42_transform;
     };

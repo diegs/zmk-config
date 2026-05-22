@@ -1,0 +1,9 @@
+file_format: "1"
+id: toucan_right_peripheral
+name: Toucan Right Peripheral
+type: shield
+url: https://github.com/beekeeb/zmk-keyboard-toucan
+requires: [seeeduino_xiao_ble]
+features:
+  - keys
+  - pointing

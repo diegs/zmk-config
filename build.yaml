@@ -14,7 +14,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact_name: toucan-left
   - board: seeeduino_xiao_ble
-    shield: toucan_right rgbled_adapter
+    shield: toucan_right_peripheral rgbled_adapter
     artifact_name: toucan-right
   - board: seeeduino_xiao_ble
     shield: settings_reset
