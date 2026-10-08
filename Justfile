@@ -11,7 +11,7 @@ build_matrix := "build.yaml"
 # parse build.yaml and filter targets by expression
 _parse_targets $expr: _check_yq_version
     #!/usr/bin/env bash
-    attrs="[.board, .shield, .snippet, .\"artifact-name\", .\"cmake-args\"]"
+    attrs="[.board, .shield, .snippet, (.\"artifact-name\" // .artifact_name), .\"cmake-args\"]"
     filter="(($attrs | map(. // [.]) | combinations), ((.include // {})[] | $attrs)) | join(\",\")"
     echo "$(yq -r "$filter" {{build_matrix}} | grep -v "^," | grep -i "${expr/#all/.*}")"
 
