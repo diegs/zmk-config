@@ -102,8 +102,6 @@ Combos allow typing common symbols and control keys without leaving the base lay
 
 | Keys Pressed | Physical Position | Output | Description |
 | :--- | :--- | :---: | :--- |
-| `Q + W` | Top Left | **`Esc`** | Quick escape |
-| `A + S` | Home Left | **`Tab`** | Quick tab |
 | `D + K` | Left Mid + Right Mid | **`Caps Word`** | Auto-disarming caps lock |
 | `J + K` | Home Right (Index + Mid) | **`(`** | Left parenthesis (Shift + combo gives `<`) |
 | `K + L` | Home Right (Mid + Ring) | **`)`** | Right parenthesis (Shift + combo gives `>`) |

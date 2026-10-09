@@ -193,20 +193,6 @@
         compatible = "zmk,combos";
 
         /* Quick Utility Combos */
-        combo_esc {
-            timeout-ms = <35>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            require-prior-idle-ms = <150>;
-        };
-
-        combo_tab {
-            timeout-ms = <35>;
-            key-positions = <13 14>;
-            bindings = <&kp TAB>;
-            require-prior-idle-ms = <150>;
-        };
-
         combo_caps_word {
             timeout-ms = <40>;
             key-positions = <15 20>;

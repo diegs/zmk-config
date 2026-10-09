@@ -47,9 +47,9 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
     J + K  ->  (   (Shift -> < )                       K + L  ->  )   (Shift -> > )
 
 ---------------------------------------  SMART PUNCTUATION & QUICK ESSENTIALS  -----------------------------------------
-  '  tap -> '   |  Shift + ' -> "                      Q + W  ->  Esc
-  ,  tap -> ,   |  Shift + , -> ;                      A + S  ->  Tab
-  .  tap -> .   |  Shift + . -> :                      D + K  ->  Caps Word
+  '  tap -> '   |  Shift + ' -> "                      D + K  ->  Caps Word
+  ,  tap -> ,   |  Shift + , -> ;
+  .  tap -> .   |  Shift + . -> :
   /  tap -> /   |  Shift + / -> ?
 
 -----------------------------------  SYSTEM LAYER (Hold Both Outer Thumbs)  --------------------------------------------
