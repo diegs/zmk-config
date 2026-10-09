@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>36-Key Unified Layout Reference</title>
+<style>
+  @page {
+    size: letter landscape;
+    margin: 0.35in;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    color: #111;
+    background: #fff;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid #222;
+    padding-bottom: 4px;
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+  }
+  .subtitle {
+    font-size: 10px;
+    color: #555;
+    font-weight: 500;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 12px;
+  }
+  .panel {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+    background: #fff;
+  }
+  .panel-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .panel-title span {
+    font-weight: 500;
+    font-size: 10px;
+    color: #666;
+    text-transform: none;
+  }
+  pre {
+    font-family: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 10.5px;
+    line-height: 1.32;
+    white-space: pre;
+  }
+  .key-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    font-size: 10px;
+  }
+  .key-table th, .key-table td {
+    padding: 2.5px 5px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  .key-table th {
+    font-weight: 700;
+    background: #f7f7f7;
+    border-bottom: 1px solid #ccc;
+    font-family: -apple-system, sans-serif;
+    font-size: 9.5px;
+  }
+  .sym {
+    font-weight: 800;
+    color: #0b57d0;
+  }
+  .mod {
+    color: #888;
+    font-size: 9px;
+  }
+  .highlight {
+    background: #f0f4fd;
+    font-weight: 700;
+  }
+  .badge {
+    display: inline-block;
+    padding: 1px 4px;
+    border-radius: 3px;
+    background: #e8eaed;
+    font-weight: 600;
+    font-size: 9.5px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 4px;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TOTEM &amp; TOUCAN &mdash; UNIFIED 36-KEY CHEAT SHEET</h1>
+  <div class="subtitle">Quick Desk Reference &bull; Flash Dongle Only &bull; Central Architecture</div>
+</header>
+
+<div class="grid">
+  <!-- LEFT COLUMN: LAYERS -->
+  <div>
+    <!-- BASE LAYER -->
+    <div class="panel">
+      <div class="panel-title">
+        Base Layer (QWERTY)
+        <span>Home Row Mods: Balanced, 250ms idle</span>
+      </div>
+      <pre>
+ [ LEFT HAND ]                                [ RIGHT HAND ]
+ [ Q ]  [ W ]  [ E ]  [ R ]  [ T ]       [ Y ]  [ U ]  [ I ]  [ O ]  [ P ]
+ [ A ]  [ S ]  [ D ]  [ F ]  [ G ]       [ H ]  [ J ]  [ K ]  [ L ]  [ ' ]
+ (Ctrl) (Alt)  (Cmd)  (Shft)                    (Shft) (Cmd)  (Alt)  (Ctrl)
+ [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]       [ N ]  [ M ]  [ , ]  [ . ]  [ / ]
+                                                Shift:  (;)    (:)    (?)
+
+          Left Thumbs                                Right Thumbs
+ [ ESC / UTIL ]  [ BSPC ]  [ SK SHIFT ]     [ ENTER ]   [ SPACE ]  [ TAB / UTIL ]
+  Hold: Util     Repeat     Tap: Capital     Direct      Direct     Hold: Util
+  Tap: Escape              Hold: Normal Shift</pre>
+    </div>
+
+    <!-- UTILITY LAYER -->
+    <div class="panel">
+      <div class="panel-title">
+        Utility Layer (UTIL)
+        <span>Hold either Left Outer (<kbd>Esc</kbd>) or Right Outer (<kbd>Tab</kbd>)</span>
+      </div>
+      <pre>
+ [ LEFT: MEDIA &amp; NAVIGATION ]                 [ RIGHT: CLASSIC NUMPAD / FN ]
+ [MUTE] [VOL-] [VOL+] [PREV] [NEXT]      [ / ] [ 7 ] [ 8 ] [ 9 ] [ * ]
+ [LEFT] [DOWN] [ UP ] [RGHT] [PLAY]      [ 0 ] [ 4 ] [ 5 ] [ 6 ] [ - ]
+ [HOME] [PGDN] [PGUP] [END ] [DEL ]      [ = ] [ 1 ] [ 2 ] [ 3 ] [ + ]
+                                                [ . ] [ 0 ]
+ <i>With Shift (Hold Shift or tap Sticky Shift thumb):</i>
+ 1..9 &rarr; <b>F1..F9</b>  &bull;  0 &rarr; <b>F10</b>  &bull;  / &rarr; <b>F11</b>  &bull;  = &rarr; <b>F12</b></pre>
+    </div>
+
+    <!-- SYSTEM LAYER -->
+    <div class="panel" style="margin-bottom: 0;">
+      <div class="panel-title">
+        System Layer (SYS)
+        <span>Hold BOTH Outer Thumbs (<kbd>Esc</kbd> + <kbd>Tab</kbd>)</span>
+      </div>
+      <pre>
+ Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
+ Bottom: [RESET] [BOOTLOADER]            [BRIGHT-] [BRIGHT+]  ...  [RESET]</pre>
+    </div>
+  </div>
+
+  <!-- RIGHT COLUMN: COMBOS & SYMBOLS -->
+  <div>
+    <!-- VERTICAL CHORDS -->
+    <div class="panel">
+      <div class="panel-title">
+        Vertical Chords (Press Top + Home, or Home + Bottom)
+        <span>Bridge seam with 1 finger pad</span>
+      </div>
+      <pre>
+ <b>TOP + HOME &mdash; NUMBER-ROW SYMBOLS (Shift 1..8):</b>
+   Left:   <b>Q+A</b> &rarr; <span class="sym">!</span>    <b>W+S</b> &rarr; <span class="sym">@</span>    <b>E+D</b> &rarr; <span class="sym">#</span>    <b>R+F</b> &rarr; <span class="sym">$</span>    <b>T+G</b> &rarr; <span class="sym">%</span>
+   Right:  <b>Y+H</b> &rarr; <span class="sym">^</span>    <b>U+J</b> &rarr; <span class="sym">+</span>    <b>I+K</b> &rarr; <span class="sym">*</span>    <b>O+L</b> &rarr; <span class="sym">&amp;</span>
+
+ <b>HOME + BOTTOM &mdash; OPERATORS &amp; PUNCTUATION:</b>
+   Left:   <b>S+X</b> &rarr; <span class="sym">`</span>    <b>D+C</b> &rarr; <span class="sym">\</span>    <b>F+V</b> &rarr; <span class="sym">=</span>    <b>G+B</b> &rarr; <span class="sym">~</span>
+   Right:  <b>H+N</b> &rarr; <span class="sym">_</span>    <b>J+M</b> &rarr; <span class="sym">-</span>    <b>K+,</b> &rarr; <span class="sym">/</span>    <b>L+.</b> &rarr; <span class="sym">|</span></pre>
+    </div>
+
+    <!-- BRACKETS & HORIZONTAL COMBOS -->
+    <div class="panel">
+      <div class="panel-title">
+        Brackets &amp; Angle Delimiters (Right Hand)
+        <span>Essential for C++ / Coding</span>
+      </div>
+      <pre>
+ <b>BOTTOM ROW NESTED BRACKETS:</b>  <span class="sym">&lt;</span>  <span class="sym">[</span>  <span class="sym">]</span>  <span class="sym">&gt;</span>
+   <b>N + M</b> &rarr; <span class="sym">&lt;</span>  (Direct angle open)       <b>. + /</b> &rarr; <span class="sym">&gt;</span>  (Direct angle close)
+   <b>M + ,</b> &rarr; <span class="sym">[</span>  (Shift &rarr; <span class="sym">{</span> )              <b>, + .</b> &rarr; <span class="sym">]</span>  (Shift &rarr; <span class="sym">}</span> )
+
+ <b>HOME ROW PARENTHESES:</b>
+   <b>J + K</b> &rarr; <span class="sym">(</span>  (Shift &rarr; <span class="sym">&lt;</span> )              <b>K + L</b> &rarr; <span class="sym">)</span>  (Shift &rarr; <span class="sym">&gt;</span> )</pre>
+    </div>
+
+    <!-- UTILITY & PUNCTUATION SUMMARY -->
+    <div class="panel" style="margin-bottom: 0;">
+      <div class="panel-title">
+        Smart Punctuation &amp; Quick Combos
+      </div>
+      <pre>
+ <b>SMART PUNCTUATION (Tap vs Shift):</b>
+   <b>'</b> &rarr; <span class="sym">'</span>  |  Shift+<b>'</b> &rarr; <span class="sym">"</span>           <b>,</b> &rarr; <span class="sym">,</span>  |  Shift+<b>,</b> &rarr; <span class="sym">;</span>
+   <b>.</b> &rarr; <span class="sym">.</span>  |  Shift+<b>.</b> &rarr; <span class="sym">:</span>           <b>/</b> &rarr; <span class="sym">/</span>  |  Shift+<b>/</b> &rarr; <span class="sym">?</span>
+
+ <b>QUICK COMBOS:</b>
+   <b>Q + W</b> &rarr; <kbd>Esc</kbd>        <b>A + S</b> &rarr; <kbd>Tab</kbd>        <b>D + K</b> &rarr; <kbd>Caps Word</kbd></pre>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <span>Tip: Print with <b>Landscape</b> orientation, 100% scale or "Fit to printable area".</span>
+  <span>Unified 36-key core &bull; github.com/diegs/zmk-config</span>
+</footer>
+
+</body>
+</html>
