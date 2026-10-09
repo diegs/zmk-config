@@ -13,29 +13,28 @@ include:
     shield: totem_dongle dongle_screen
     artifact_name: totem-display
 
-  # --- Toucan (Split Keyboard With Dongle) ---
+  # --- Toucan (Standalone: Left is Central with Built-in Display) ---
+  - board: seeeduino_xiao_ble
+    shield: toucan_left rgbled_adapter nice_view_gem
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact_name: toucan-display
+  - board: seeeduino_xiao_ble
+    shield: toucan_right rgbled_adapter
+    artifact_name: toucan-right
+
+  # --- Toucan (With Small Dongle) ---
   - board: raytac_mdbt50q_rx
     shield: toucan_dongle
     artifact_name: toucan-dongle
   - board: seeeduino_xiao_ble
-    shield: toucan_dongle dongle_screen
-    artifact_name: toucan-display
-  - board: seeeduino_xiao_ble
     shield: toucan_left_peripheral rgbled_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact_name: toucan-left
+    artifact_name: toucan-left-peripheral
   - board: seeeduino_xiao_ble
     shield: toucan_right_peripheral rgbled_adapter
-    artifact_name: toucan-right
-
-  # --- Toucan (Standalone / No Dongle) ---
-  - board: seeeduino_xiao_ble
-    shield: toucan_left rgbled_adapter
-    artifact_name: toucan-standalone-left
-  - board: seeeduino_xiao_ble
-    shield: toucan_right rgbled_adapter
-    artifact_name: toucan-standalone-right
+    artifact_name: toucan-right-peripheral
 
   # --- Utilities & Resets ---
   - board: seeeduino_xiao_ble

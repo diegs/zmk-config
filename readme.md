@@ -33,15 +33,14 @@ just build totem-display   # Display dongle (Seeed XIAO BLE + ST7789 screen)
 just build totem-left      # Left half (Peripheral)
 just build totem-right     # Right half (Peripheral)
 
-# Build Toucan targets (With Dongle)
-just build toucan-dongle   # Small dongle (Raytac MDBT50Q-RX)
-just build toucan-display  # Display dongle (Seeed XIAO BLE + ST7789 screen)
-just build toucan-left     # Left peripheral
-just build toucan-right    # Right peripheral
+# Build Toucan targets (Standalone: Left is Central with Built-in Display)
+just build toucan-display   # Left half (Central + Built-in nice!view Display + Trackpad)
+just build toucan-right     # Right half (Peripheral + Trackpad)
 
-# Build Toucan targets (Standalone / No Dongle)
-just build toucan-standalone-left   # Left half (Central)
-just build toucan-standalone-right  # Right half (Peripheral)
+# Build Toucan targets (With Small Dongle)
+just build toucan-dongle            # Small dongle (Raytac MDBT50Q-RX)
+just build toucan-left-peripheral   # Left half (Peripheral)
+just build toucan-right-peripheral  # Right half (Peripheral)
 ```
 
 Compiled `.uf2` binaries are output to the [`firmware/`](firmware/) directory.
