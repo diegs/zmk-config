@@ -27,16 +27,21 @@ This repository uses a self-contained [Nix Flake](flake.nix) providing the Zephy
 # List all available build targets
 just list
 
-# Build all Totem targets (dongle, left, right)
-just build totem
+# Build Totem targets
+just build totem-dongle    # Small dongle (Raytac MDBT50Q-RX)
+just build totem-display   # Display dongle (Seeed XIAO BLE + ST7789 screen)
+just build totem-left      # Left half (Peripheral)
+just build totem-right     # Right half (Peripheral)
 
-# Build a single target
-just build totem-dongle
-just build totem-left
-just build totem-right
+# Build Toucan targets (With Dongle)
+just build toucan-dongle   # Small dongle (Raytac MDBT50Q-RX)
+just build toucan-display  # Display dongle (Seeed XIAO BLE + ST7789 screen)
+just build toucan-left     # Left peripheral
+just build toucan-right    # Right peripheral
 
-# Build Toucan targets
-just build toucan
+# Build Toucan targets (Standalone / No Dongle)
+just build toucan-standalone-left   # Left half (Central)
+just build toucan-standalone-right  # Right half (Peripheral)
 ```
 
 Compiled `.uf2` binaries are output to the [`firmware/`](firmware/) directory.
@@ -47,5 +52,5 @@ Compiled `.uf2` binaries are output to the [`firmware/`](firmware/) directory.
 
 Because the dongle acts as the **Central (master)** device:
 - The keymap, layers, behaviors, and combos live and execute solely on the dongle.
-- Reflashing the keymap only requires flashing **`totem-dongle.uf2`**.
+- Reflashing keymap changes only requires flashing the dongle (**`totem-dongle.uf2`** or **`totem-display.uf2`**).
 - The left and right halves only need to be flashed when board definitions, radio transmission power, or hardware configurations change.

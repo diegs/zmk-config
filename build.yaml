@@ -1,13 +1,25 @@
 include:
+  # --- Totem (Split Keyboard) ---
   - board: seeeduino_xiao_ble
     shield: totem_left
     artifact_name: totem-left
   - board: seeeduino_xiao_ble
     shield: totem_right
     artifact_name: totem-right
+  - board: raytac_mdbt50q_rx
+    shield: totem_dongle
+    artifact_name: totem-dongle
   - board: seeeduino_xiao_ble
     shield: totem_dongle dongle_screen
-    artifact_name: totem-dongle
+    artifact_name: totem-display
+
+  # --- Toucan (Split Keyboard With Dongle) ---
+  - board: raytac_mdbt50q_rx
+    shield: toucan_dongle
+    artifact_name: toucan-dongle
+  - board: seeeduino_xiao_ble
+    shield: toucan_dongle dongle_screen
+    artifact_name: toucan-display
   - board: seeeduino_xiao_ble
     shield: toucan_left_peripheral rgbled_adapter
     snippet: studio-rpc-usb-uart
@@ -16,12 +28,19 @@ include:
   - board: seeeduino_xiao_ble
     shield: toucan_right_peripheral rgbled_adapter
     artifact_name: toucan-right
+
+  # --- Toucan (Standalone / No Dongle) ---
+  - board: seeeduino_xiao_ble
+    shield: toucan_left rgbled_adapter
+    artifact_name: toucan-standalone-left
+  - board: seeeduino_xiao_ble
+    shield: toucan_right rgbled_adapter
+    artifact_name: toucan-standalone-right
+
+  # --- Utilities & Resets ---
   - board: seeeduino_xiao_ble
     shield: settings_reset
     artifact_name: settings-reset
-  - board: raytac_mdbt50q_rx
-    shield: toucan_dongle
-    artifact_name: toucan-dongle
   - board: raytac_mdbt50q_rx
     shield: settings_reset
     artifact_name: raytac-settings-reset
