@@ -9,3 +9,5 @@ draw/
 node_modules/
 *.uf2
 *.bin
+keycaps/**/*.stl
+keycaps/**/*.zip
