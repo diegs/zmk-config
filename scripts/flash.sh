@@ -31,7 +31,7 @@ else
 fi
 
 UF2_NAME="$(basename "$UF2_FILE")"
-FILE_SIZE="$(stat -f '%z' "$UF2_FILE" 2>/dev/null || wc -c < "$UF2_FILE" | tr -d ' ')"
+FILE_SIZE="$(wc -c < "$UF2_FILE" | tr -d ' ')"
 echo "📦 Target firmware: $UF2_NAME ($FILE_SIZE bytes)"
 
 # Function to detect mounted UF2 volume
