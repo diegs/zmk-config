@@ -27,11 +27,11 @@ Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]
                       2x Tap: Caps Lock    Hold: Util Layer          Shift -> Delete  Shift -> Backspace
 
 ----------------------------------------  UTILITY LAYERS & NUMWORD  -----------------------------------------------
-      [ LEFT: MEDIA & NAV ]                                            [ RIGHT: CLASSIC NUMPAD & FN ]
-Top:    [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]             [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]
-Home:   [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]         [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]
-Bottom: [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]             [ = ]     [ 1 ]     [ 2 ]     [ 3 ]     [ + ]
-                                                                                   [ . ]  [ Space / Disarm ]
+      [ LEFT: CLASSIC NUMPAD & FN ]                                    [ RIGHT: NAV & MEDIA (HJKL) ]
+Top:    [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]             [ HOME ]  [PG_DN ]  [PG_UP ]  [ END  ]  [ DEL  ]
+Home:   [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]             [ LEFT ]  [ DOWN ]  [  UP  ]  [RIGHT ]  [PLAY/PAUSE]
+Bottom: [ = ]     [ 1 ]     [ 2 ]     [ 3 ]     [ + ]             [ MUTE ]  [VOL_DN]  [VOL_UP]  [ PREV ]  [ NEXT ]
+                   [ . ]                                                     [ . ]     [ Space / Disarm ]
   Smart Numword: Tap Left Inner Thumb -> Type numbers/math. Letters/Space/Enter auto-disarm!
   With Shift (Tap Sticky Shift or hold Shift):
   1..9 -> F1..F9  |  0 -> F10  |  / -> F11  |  = -> F12

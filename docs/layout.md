@@ -68,23 +68,23 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
 
 ---
 
-### Shared Utility Layers (`UTIL`) — Nav, Media & Numpad / Fn-Pad
+### Shared Utility Layers (`UTIL`) — Numpad / Fn-Pad & Nav / Media (Vim HJKL)
 
 *Activated momentarily by **holding** Left Inner Thumb (`&smart_num`), or entered via **Smart Numword** tap.*
 
 ```
-       [ LEFT HAND: NAV & MEDIA ]                             [ RIGHT HAND: CLASSIC NUMPAD ]
-Top:    [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]        [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]
-Home:   [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]    [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]
-Bottom: [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]        [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]
-Thumbs:                                                     [   .   ] [ Space / Disarm ]
+       [ LEFT HAND: CLASSIC NUMPAD ]                          [ RIGHT HAND: NAV & MEDIA (HJKL) ]
+Top:    [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]        [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]
+Home:   [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]        [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]
+Bottom: [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]        [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]
+Thumbs:                     [   .   ]                       [   .   ] [ Space / Disarm ]
 ```
 
 #### Smart Numword Mechanics:
 - **Tap Left Inner Thumb**: Activates Numword.
 - **Typing numbers (`0-9`), math symbols (`* - + / =`), or decimal (`.`)** keeps Numword active.
 - **Tapping Space, Enter, or any alpha key** automatically disarms Numword and returns to the base layer.
-- **Right Inner Thumb on Util** outputs `.` (decimal point) without exiting Numword.
+- **Left Inner Thumb and Right Inner Thumb on Util** output `.` (decimal point) without exiting Numword.
 - **Right Middle Thumb on Util** passes through `Space`, sending a space and immediately disarming Numword.
 
 #### Numpad to Fn-Pad Transformation:
