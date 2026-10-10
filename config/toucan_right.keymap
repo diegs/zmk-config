@@ -1,6 +1,7 @@
 #include "shared.keymap"
 
 &tps43_trackpad {
+    hold-time = <300>;
     /delete-property/ zoom;
     /delete-property/ three-finger-swipe;
     /delete-property/ three-finger-swipe-throttle-ms;
