@@ -31,7 +31,7 @@ Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]
 Top:    [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]             [ HOME ]  [PG_DN ]  [PG_UP ]  [ END  ]  [ DEL  ]
 Home:   [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]             [ LEFT ]  [ DOWN ]  [  UP  ]  [RIGHT ]  [PLAY/PAUSE]
 Bottom: [ = ]     [ 1 ]     [ 2 ]     [ 3 ]     [ + ]             [ MUTE ]  [VOL_DN]  [VOL_UP]  [ PREV ]  [ NEXT ]
-                   [ . ]                                                     [ DEL ]   [ Space / Disarm ]
+                   [ . ]                                                     [ Enter / Disarm ] [ Space / Disarm ]
   Smart Numword: Tap Left Inner Thumb -> Type numbers/math. Letters/Space/Enter auto-disarm!
   With Shift (Tap Sticky Shift or hold Shift):
   1..9 -> F1..F9  |  0 -> F10  |  / -> F11  |  = -> F12
@@ -56,7 +56,7 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
     Col2 + Col3  ->  (   (Shift -> < )                 Col3 + Col4  ->  )   (Shift -> > )
 
 ---------------------------------------  SMART PUNCTUATION & THUMB MORPHS  ---------------------------------------------
-  '  tap -> '   |  Shift + ' -> "                      Shift + Space -> Backspace  |  Util Enter -> Delete
+  '  tap -> '   |  Shift + ' -> "                      Shift + Space -> Backspace  |  Util Pinky -> Delete
   ,  tap -> ,   |  Shift + , -> ;                      Tap Shift     -> Sticky Shift
   .  tap -> .   |  Shift + . -> :                      2x Tap Shift  -> Caps Lock
   /  tap -> /   |  Shift + / -> ?

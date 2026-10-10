@@ -14,7 +14,7 @@ This document describes the unified 36-key layout used across both the **Totem**
   - **Right Inner Thumb**: Dedicated `Enter` key (`Shift + Enter` is preserved for newlines in chat/documents).
   - **Left Inner Thumb**: Smart Numword & Momentary Util (`&smart_num 2 2`: Tap for auto-disarming Numword, Hold for Util layer).
   - **Outer Thumbs**: Dedicated `Esc` (Left Outer) and `Tab` (Right Outer).
-- **Forward Delete**: Accessed on the Right Inner Thumb in the Util layer (same physical key as Enter), plus the top-right pinky on the Util layer.
+- **Forward Delete**: Positioned on the top-right pinky of the Util layer (`HOME`, `PGDN`, `PGUP`, `END`, `DEL`).
 - **Smart Numword**: Tapping the Left Inner thumb activates the number layer. Typing numbers and operators keeps it active; typing a letter, Space, or Enter automatically disarms it.
 - **Chords for Symbols**: Vertical and horizontal 2-key combos provide all standard number-row and coding symbols directly from the base layer without switching layers.
 - **System Layer Combo**: Pressing both outer thumbs simultaneously (`Esc + Tab`) opens the System layer for Bluetooth and layout toggles.
@@ -78,7 +78,7 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
 Top:    [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]        [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]
 Home:   [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]        [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]
 Bottom: [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]        [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]
-Thumbs:                     [   .   ]                       [  DEL  ] [ Space / Disarm ]
+Thumbs:                     [   .   ]                       [ Enter / Disarm ] [ Space / Disarm ]
 ```
 
 #### Smart Numword Mechanics:
@@ -86,7 +86,7 @@ Thumbs:                     [   .   ]                       [  DEL  ] [ Space / 
 - **Typing numbers (`0-9`), math symbols (`* - + / =`), or decimal (`.`)** keeps Numword active.
 - **Tapping Space, Enter, or any alpha key** automatically disarms Numword and returns to the base layer.
 - **Left Inner Thumb on Util** outputs `.` (decimal point) without exiting Numword.
-- **Right Inner Thumb on Util** outputs `Delete` (`DEL`).
+- **Right Inner Thumb on Util** passes through `Enter`, submitting and immediately disarming Numword.
 - **Right Middle Thumb on Util** passes through `Space`, sending a space and immediately disarming Numword.
 
 #### Numpad to Fn-Pad Transformation:
