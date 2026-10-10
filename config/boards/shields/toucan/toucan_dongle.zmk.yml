@@ -2,7 +2,7 @@ file_format: "1"
 id: toucan_dongle
 name: Toucan Dongle
 type: shield
-url: https://github.com/beekeeb/zmk-keyboard-toucan
+url: https://github.com/beekeeb/zmk-keyboard-toucan2
 requires: [raytac_mdbt50q_rx]
 features:
   - keys
