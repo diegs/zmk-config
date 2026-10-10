@@ -28,8 +28,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-   [ ESC / UTIL ]   [ BACKSPACE ]   [ STICKY SHIFT ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
-    (Hold Layer 2)   (Hold repeat)     (&sk LSHFT)           (Direct)   (Direct)   (Hold Layer 3)
+   [ ESC / UTIL ]   [ BACKSPACE ]   [ SHIFT / CAPS ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
+    (Hold Layer 2)   (Hold repeat)   (Tap: Shift, 2x: Caps)  (Direct)   (Direct)   (Hold Layer 3)
 ```
 
 #### Smart Punctuation on QWERTY:
@@ -51,8 +51,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-   [ ESC / UTIL ]   [ BACKSPACE ]   [ STICKY SHIFT ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
-    (Hold Layer 2)   (Hold repeat)     (&sk LSHFT)           (Direct)   (Direct)   (Hold Layer 3)
+   [ ESC / UTIL ]   [ BACKSPACE ]   [ SHIFT / CAPS ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
+    (Hold Layer 2)   (Hold repeat)   (Tap: Shift, 2x: Caps)  (Direct)   (Direct)   (Hold Layer 3)
 ```
 
 #### Smart Punctuation on Colemak-DH:
@@ -131,7 +131,6 @@ Combos allow typing common symbols and control keys without leaving the base lay
 
 | Keys Pressed | Physical Position | Output | Description |
 | :--- | :--- | :---: | :--- |
-| `D + K` | Left Mid + Right Mid | **`Caps Word`** | Auto-disarming caps lock |
 | `J + K` | Home Right (Index + Mid) | **`(`** | Left parenthesis (Shift + combo gives `<`) |
 | `K + L` | Home Right (Mid + Ring) | **`)`** | Right parenthesis (Shift + combo gives `>`) |
 | `N + M` | Bottom Right (Inner + Index) | **`<`** | Direct left angle bracket (great for C++) |

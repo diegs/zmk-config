@@ -22,9 +22,9 @@ Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]
                                                                         Shift:        (;)       (:)       (?)
 
                Left Thumbs                                                   Right Thumbs
-       [ ESC / UTIL ]   [ BSPC ]   [ SK SHIFT ]                 [ ENTER ]     [ SPACE ]    [ TAB / UTIL ]
-        Hold: L2 Util    Repeat     Tap: Capital                 Direct        Direct       Hold: L3 Util
-        Tap: Escape                Hold: Normal Shift
+       [ ESC / UTIL ]   [ BSPC ]   [ SHIFT / CAPS ]             [ ENTER ]     [ SPACE ]    [ TAB / UTIL ]
+        Hold: L2 Util    Repeat     Tap: Shift / Hold: Shift     Direct        Direct       Hold: L3 Util
+        Tap: Escape                 2x Tap: Caps Lock
 
 ----------------------------------------  UTILITY LAYERS (Hold Outer Thumb)  -------------------------------------------
       [ LEFT: MEDIA & NAV ]                                            [ RIGHT: CLASSIC NUMPAD & FN ]
@@ -55,7 +55,7 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
     Col2 + Col3  ->  (   (Shift -> < )                 Col3 + Col4  ->  )   (Shift -> > )
 
 ---------------------------------------  SMART PUNCTUATION & QUICK ESSENTIALS  -----------------------------------------
-  '  tap -> '   |  Shift + ' -> "                      Middle 2 Keys (Home)  ->  Caps Word
+  '  tap -> '   |  Shift + ' -> "                      Shift Thumb: Tap -> Shift  |  2x Tap -> Caps Lock
   ,  tap -> ,   |  Shift + , -> ;
   .  tap -> .   |  Shift + . -> :
   /  tap -> /   |  Shift + / -> ?
