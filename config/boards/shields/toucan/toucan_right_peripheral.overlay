@@ -8,36 +8,56 @@
 };
 
 &pinctrl {
-    spi0_default: spi0_default {
+    i2c0_azoteq_default: i2c0_azoteq_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+            psels = <NRF_PSEL(TWIM_SDA, 1, 13)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 15)>;
+            bias-pull-up;
         };
     };
 
-    spi0_sleep: spi0_sleep {
+    i2c0_azoteq_sleep: i2c0_azoteq_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
-                <NRF_PSEL(SPIM_MOSI, 0, 17)>,
-                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+            psels = <NRF_PSEL(TWIM_SDA, 1, 13)>,
+                    <NRF_PSEL(TWIM_SCL, 1, 15)>;
             low-power-enable;
         };
     };
 };
 
-&spi0 {
+&i2c0 {
     status = "okay";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
+    clock-frequency = <I2C_BITRATE_FAST>;
+    pinctrl-0 = <&i2c0_azoteq_default>;
+    pinctrl-1 = <&i2c0_azoteq_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 22 GPIO_ACTIVE_LOW>;
 
-    trackpad: pinnacle@0 {
-        compatible = "cirque,pinnacle";
-        reg = <0>;
-        spi-max-frequency = <1000000>;
-        dr-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH)>;
+    tps43_trackpad: trackpad@74 {
+        compatible = "azoteq,tps43";
+        reg = <0x74>;
+        status = "okay";
+
+        rst-gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
+        rdy-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+
+        enable-power-management;
+        report-rate-lp2 = <640>;
+        scroll-angle = <30>;
+        sensitivity = <100>;
+        scroll-sensitivity = <100>;
+
+        filter-settings = <0x0B>;
+        hold-time = <500>;
+
+        zoom;
+        scroll;
+        two-finger-tap;
+        single-tap;
+        press-and-hold;
+        three-finger-swipe;
+        three-finger-swipe-throttle-ms = <1200>;
+        switch-xy;
+        invert-scroll-y;
     };
 };
 
@@ -48,14 +68,10 @@
 
         trackpad_relay: trackpad_relay@0 {
             compatible = "zmk,input-split";
-            device = <&trackpad>;
+            device = <&tps43_trackpad>;
             reg = <0>;
         };
     };
-};
-
-&xiao_i2c {
-    status = "disabled";
 };
 
 &kscan0 {

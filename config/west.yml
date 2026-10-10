@@ -25,15 +25,19 @@ manifest:
     - name: zmk-component-raytac-dongle
       remote: rschenk
       path: modules/zmk-component-raytac-dongle
-    - name: zmk-keyboard-toucan
+    - name: zmk-keyboard-toucan2
       remote: beekeeb
       revision: main
       import: config/west.yml 
-      path: modules/zmk-keyboard-toucan 
-    - name: cirque-input-module
-      remote: geeksville
-      revision: toucan
-      path: modules/cirque-input-module
+      path: modules/zmk-keyboard-toucan2
+    - name: zmk_driver_azoteq
+      remote: beekeeb
+      revision: main
+      path: modules/zmk_driver_azoteq
+    - name: zmk-input-zoom
+      remote: beekeeb
+      revision: main
+      path: modules/zmk-input-zoom
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: v0.3
