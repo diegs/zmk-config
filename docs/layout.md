@@ -17,7 +17,7 @@ This document describes the unified 36-key layout used across both the **Totem**
 
 ## 2. Layer Diagrams
 
-### Base Layer (`BASE`) — Active 36-Key QWERTY
+### Layer 0: QWERTY Base (`QWERTY`)
 
 ```
        [ LEFT HAND ]                                          [ RIGHT HAND ]
@@ -29,10 +29,10 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ .
 
           Left Thumbs                                             Right Thumbs
    [ ESC / UTIL ]   [ BACKSPACE ]   [ STICKY SHIFT ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
-    (Hold Layer 1)   (Hold repeat)     (&sk LSHFT)           (Direct)   (Direct)   (Hold Layer 2)
+    (Hold Layer 2)   (Hold repeat)     (&sk LSHFT)           (Direct)   (Direct)   (Hold Layer 3)
 ```
 
-#### Smart Punctuation on Base Layer:
+#### Smart Punctuation on QWERTY:
 - **Right Pinky (`'`)**: Tap for `'` (apostrophe), Shift + Tap for `"` (double quote).
 - **Comma (`,`)**: Tap for `,`, Shift + Tap for `;` (semicolon).
 - **Period (`.`)**: Tap for `.`, Shift + Tap for `:` (colon).
@@ -40,9 +40,32 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ .
 
 ---
 
-### Shared Utility Layer (`UTIL`) — Nav, Media & Numpad / Fn-Pad
+### Layer 1: Colemak-DH Base (`COL-DH`)
 
-*Activated by holding **either** Left Outer Thumb (`Esc`) or Right Outer Thumb (`Tab`).*
+```
+       [ LEFT HAND ]                                          [ RIGHT HAND ]
+Top:    [ Q ]  [ W ]  [ F ]  [ P ]  [ B ]               [ J ]  [ L ]  [ U ]  [ Y ]  [ ' ]
+Home:   [ A ]  [ R ]  [ S ]  [ T ]  [ G ]               [ M ]  [ N ]  [ E ]  [ I ]  [ O ]
+        (Ctrl) (Alt)  (Gui)                                           (Gui)  (Alt)  (Ctrl)
+Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ . ]  [ / ]
+                                                                      (;)    (:)    (?)
+
+          Left Thumbs                                             Right Thumbs
+   [ ESC / UTIL ]   [ BACKSPACE ]   [ STICKY SHIFT ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
+    (Hold Layer 2)   (Hold repeat)     (&sk LSHFT)           (Direct)   (Direct)   (Hold Layer 3)
+```
+
+#### Smart Punctuation on Colemak-DH:
+- **Top Right Pinky (`'`)**: Tap for `'` (apostrophe), Shift + Tap for `"` (double quote).
+- **Comma (`,`)**: Tap for `,`, Shift + Tap for `;` (semicolon).
+- **Period (`.`)**: Tap for `.`, Shift + Tap for `:` (colon).
+- **Slash (`/`)**: Tap for `/`, Shift + Tap for `?` (question mark).
+
+---
+
+### Shared Utility Layers (`UTIL`) — Nav, Media & Numpad / Fn-Pad
+
+*Activated by holding **either** Left Outer Thumb (`Esc`, Layer 2) or Right Outer Thumb (`Tab`, Layer 3).*
 
 ```
        [ LEFT HAND: NAV & MEDIA ]                             [ RIGHT HAND: CLASSIC NUMPAD ]
@@ -63,19 +86,25 @@ Every number key morphs into its corresponding F-key when Shift is active (via *
 
 ---
 
-### System Layer (`SYS`) — Bluetooth & Hardware Controls
+### Layer 4: System Layer (`SYS`) — Bluetooth & Layout Switching
 
 *Activated automatically when holding **BOTH** Left Outer Thumb (`Esc`) and Right Outer Thumb (`Tab`) simultaneously.*
 
 ```
 Top:    [BT_SEL 0] [BT_SEL 1] [BT_SEL 2] [BT_SEL 3] [BT_CLR]
-Bottom: [RESET   ] [BOOTLOAD] [        ] [SCR_DN  ] [SCR_UP]  ...  [RESET]
+Home:                        [QWERTY]                                [COL-DH]
+Bottom: [RESET   ] [BOOTLOAD] [        ] [SCR_DN  ] [SCR_UP]  ...                       [RESET]
 ```
 
-- **`BT_SEL 0 - 3`**: Switch Bluetooth profile.
-- **`BT_CLR`**: Clear Bluetooth bond for current profile.
-- **`SCR_DN / UP`** (`F23 / F24`): Adjust dongle display brightness.
-- **`RESET / BOOTLOAD`**: Soft reboot or enter UF2 bootloader mode.
+- **Layout Switching**:
+  - **Left Index (`F` / `T` position)**: Switch to **QWERTY** (`&to 0`).
+  - **Right Index (`J` / `N` position)**: Switch to **Colemak-DH** (`&to 1`).
+- **Bluetooth Controls**:
+  - **`BT_SEL 0 - 3`**: Switch Bluetooth profile.
+  - **`BT_CLR`**: Clear Bluetooth bond for current profile.
+- **Display & Hardware**:
+  - **`SCR_DN / UP`** (`F23 / F24`): Adjust dongle display brightness.
+  - **`RESET / BOOTLOAD`**: Soft reboot or enter UF2 bootloader mode.
 
 ---
 
@@ -85,12 +114,12 @@ Totem provides 3 physical thumb keys per half (6 total), arranged as follows:
 
 | Hand | Position | Primary Action | Hold Action | Behavior Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **Left** | Outer | `Esc` | Layer 1 (`UTIL`) | Hold to access Right-Hand Numpad with right hand free |
+| **Left** | Outer | `Esc` | Layer 2 (`UTIL`) | Hold to access Right-Hand Numpad with right hand free |
 | **Left** | Middle (Resting) | `Backspace` | *(None)* | Pure tap key; hold down to rapidly repeat deletion (balances `Space` on Right Middle) |
 | **Left** | Inner (Tuck) | `Sticky Shift` | `Shift` (Hold) | Tap to capitalize next stroke; hold for normal Shift |
 | **Right**| Inner (Tuck) | `Enter` | *(None)* | Pure tap key for submissions and newline |
 | **Right**| Middle (Resting) | `Space` | *(None)* | Pure tap key for typing flow |
-| **Right**| Outer | `Tab` | Layer 2 (`UTIL`) | Hold to access Left-Hand Nav/Media with left hand free |
+| **Right**| Outer | `Tab` | Layer 3 (`UTIL`) | Hold to access Left-Hand Nav/Media with left hand free |
 
 ---
 

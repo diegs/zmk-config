@@ -5,7 +5,7 @@
                                       TOTEM & TOUCAN — 36-KEY UNIFIED REFERENCE
 ========================================================================================================================
 
-------------------------------------------------  BASE LAYER  ---------------------------------------------------------
+-----------------------------------------  LAYER 0: QWERTY BASE LAYER  -------------------------------------------------
       [ LEFT HAND ]                                                    [ RIGHT HAND ]
 Top:    [ Q ]     [ W ]     [ E ]     [ R ]     [ T ]            [ Y ]     [ U ]     [ I ]     [ O ]     [ P ]
 Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]     [ K ]     [ L ]     [ ' ]
@@ -13,12 +13,20 @@ Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]
 Bottom: [ Z ]     [ X ]     [ C ]     [ V ]     [ B ]            [ N ]     [ M ]     [ , ]     [ . ]     [ / ]
                                                                         Shift:        (;)       (:)       (?)
 
+---------------------------------------  LAYER 1: COLEMAK-DH BASE LAYER  -----------------------------------------------
+      [ LEFT HAND ]                                                    [ RIGHT HAND ]
+Top:    [ Q ]     [ W ]     [ F ]     [ P ]     [ B ]            [ J ]     [ L ]     [ U ]     [ Y ]     [ ' ]
+Home:   [ A ]     [ R ]     [ S ]     [ T ]     [ G ]            [ M ]     [ N ]     [ E ]     [ I ]     [ O ]
+       (Ctrl)    (Alt)     (Cmd)                                                (Cmd)     (Alt)     (Ctrl)
+Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]     [ , ]     [ . ]     [ / ]
+                                                                        Shift:        (;)       (:)       (?)
+
                Left Thumbs                                                   Right Thumbs
        [ ESC / UTIL ]   [ BSPC ]   [ SK SHIFT ]                 [ ENTER ]     [ SPACE ]    [ TAB / UTIL ]
-        Hold: Util       Repeat     Tap: Capital                 Direct        Direct       Hold: Util
+        Hold: L2 Util    Repeat     Tap: Capital                 Direct        Direct       Hold: L3 Util
         Tap: Escape                Hold: Normal Shift
 
-----------------------------------------  UTILITY LAYER (Hold Outer Thumb)  --------------------------------------------
+----------------------------------------  UTILITY LAYERS (Hold Outer Thumb)  -------------------------------------------
       [ LEFT: MEDIA & NAV ]                                            [ RIGHT: CLASSIC NUMPAD & FN ]
 Top:    [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]             [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]
 Home:   [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]         [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]
@@ -31,29 +39,31 @@ Bottom: [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]             [ = ]     [ 1 ]
 Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging the seam:
 
   TOP + HOME (Number-Row Symbols):
-    Left:   Q+A -> !     W+S -> @     E+D -> #     R+F -> $     T+G -> %
-    Right:  Y+H -> ^     U+J -> +     I+K -> *     O+L -> &
+    Left:   Col1 -> !     Col2 -> @     Col3 -> #     Col4 -> $     Col5 -> %
+    Right:  Col1 -> ^     Col2 -> +     Col3 -> *     Col4 -> &
 
   HOME + BOTTOM (Operators & Punctuation):
-    Left:   S+X -> `     D+C -> \     F+V -> =     G+B -> ~
-    Right:  H+N -> _     J+M -> -     K+, -> /     L+. -> |
+    Left:   Col2 -> `     Col3 -> \     Col4 -> =     Col5 -> ~
+    Right:  Col1 -> _     Col2 -> -     Col3 -> /     Col4 -> |
 
 -------------------------------------  HORIZONTAL COMBOS (Brackets & Angles)  ------------------------------------------
   Right Bottom: <  [  ]  >
-    N + M  ->  <   (Direct angle open)                 . + /  ->  >   (Direct angle close)
-    M + ,  ->  [   (Shift -> { )                       , + .  ->  ]   (Shift -> } )
+    Col1 + Col2  ->  <   (Direct angle open)           Col4 + Col5  ->  >   (Direct angle close)
+    Col2 + Col3  ->  [   (Shift -> { )                 Col3 + Col4  ->  ]   (Shift -> } )
 
   Right Home:  (  )
-    J + K  ->  (   (Shift -> < )                       K + L  ->  )   (Shift -> > )
+    Col2 + Col3  ->  (   (Shift -> < )                 Col3 + Col4  ->  )   (Shift -> > )
 
 ---------------------------------------  SMART PUNCTUATION & QUICK ESSENTIALS  -----------------------------------------
-  '  tap -> '   |  Shift + ' -> "                      D + K  ->  Caps Word
+  '  tap -> '   |  Shift + ' -> "                      Middle 2 Keys (Home)  ->  Caps Word
   ,  tap -> ,   |  Shift + , -> ;
   .  tap -> .   |  Shift + . -> :
   /  tap -> /   |  Shift + / -> ?
 
------------------------------------  SYSTEM LAYER (Hold Both Outer Thumbs)  --------------------------------------------
+-----------------------------------  LAYER 4: SYSTEM (Hold Both Outer Thumbs)  -----------------------------------------
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
-  Bottom: [RESET] [BOOTLOADER]            [BRIGHT-] [BRIGHT+]  ...  [RESET]
+  Home:                   [QWERTY]                                       [COL-DH]
+          (Left Index: &to 0)                                            (Right Index: &to 1)
+  Bottom: [RESET] [BOOTLOADER]            [BRIGHT-] [BRIGHT+]  ...       [RESET]
 ========================================================================================================================
 ```

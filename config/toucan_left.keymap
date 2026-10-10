@@ -1,1 +1,11 @@
 #include "shared.keymap"
+
+&is_touching_processor {
+    bindings = <&mo 5>;
+};
+
+&trackpad_listener {
+    scroller {
+        layers = <2 3>;
+    };
+};
