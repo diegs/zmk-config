@@ -1,1 +1,7 @@
 #include "shared.keymap"
+
+&tps43_trackpad {
+    /delete-property/ zoom;
+    /delete-property/ three-finger-swipe;
+    /delete-property/ three-finger-swipe-throttle-ms;
+};

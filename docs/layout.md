@@ -23,7 +23,7 @@ This document describes the unified 36-key layout used across both the **Totem**
        [ LEFT HAND ]                                          [ RIGHT HAND ]
 Top:    [ Q ]  [ W ]  [ E ]  [ R ]  [ T ]               [ Y ]  [ U ]  [ I ]  [ O ]  [ P ]
 Home:   [ A ]  [ S ]  [ D ]  [ F ]  [ G ]               [ H ]  [ J ]  [ K ]  [ L ]  [ ' ]
-        (Ctrl) (Alt)  (Gui)  (Shft)                            (Shft) (Gui)  (Alt)  (Ctrl)
+        (Ctrl) (Alt)  (Gui)                                           (Gui)  (Alt)  (Ctrl)
 Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ . ]  [ / ]
                                                                       (;)    (:)    (?)
 

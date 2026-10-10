@@ -9,7 +9,7 @@
       [ LEFT HAND ]                                                    [ RIGHT HAND ]
 Top:    [ Q ]     [ W ]     [ E ]     [ R ]     [ T ]            [ Y ]     [ U ]     [ I ]     [ O ]     [ P ]
 Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]     [ K ]     [ L ]     [ ' ]
-       (Ctrl)    (Alt)     (Cmd)     (Shft)                               (Shft)    (Cmd)     (Alt)     (Ctrl)
+       (Ctrl)    (Alt)     (Cmd)                                                (Cmd)     (Alt)     (Ctrl)
 Bottom: [ Z ]     [ X ]     [ C ]     [ V ]     [ B ]            [ N ]     [ M ]     [ , ]     [ . ]     [ / ]
                                                                         Shift:        (;)       (:)       (?)
 
