@@ -14,6 +14,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: geeksville
       url-base: https://github.com/geeksville
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -42,5 +44,9 @@ manifest:
       remote: caksoylar
       revision: v0.3
       path: modules/zmk-rgbled-widget
+    - name: zmk-auto-layer
+      remote: urob
+      revision: v0.3
+      path: modules/zmk-auto-layer
   self:
     path: config

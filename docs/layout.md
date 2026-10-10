@@ -7,11 +7,16 @@ This document describes the unified 36-key layout used across both the **Totem**
 ## 1. Overview & Core Principles
 
 - **Unified 36-Key Muscle Memory**: Although both keyboards use a 42-key logical matrix under ZMK, all outer-column extra keys are disabled (`&none`). Whether typing on the Totem or Toucan, your fingers hit the exact same physical keys.
-- **Timeless Homerow Mods (HRM)**: Configured with `flavor = "balanced"` and `require-prior-idle-ms = <250>`. In-flow typing resolves instantly to letters on key-down (zero latency), while deliberate modifier chords fire without timer delays.
-- **Sticky Shift on Left Thumb**: Tap once to capitalize the next key; hold for traditional Shift. Eliminates awkward pinky/ring finger holding during normal typing.
-- **Single Shared Utility Layer**: A single layer houses all Navigation, Media controls, and the classic 10-key Numpad.
-- **Dual-Thumb Layer Access**: Holding **either** the Left Outer Thumb (`Esc`) or the Right Outer Thumb (`Tab`) opens the Utility layer.
+- **Timeless Homerow Mods (HRM)**: Configured with `flavor = "balanced"`, `tapping-term-ms = <280>`, and `require-prior-idle-ms = <250>`. In-flow typing resolves instantly to letters on key-down (zero latency), while deliberate modifier chords fire without timer delays.
+- **Ergonomic Thumbs & Shift Morphs**:
+  - **Left Middle Thumb**: Shift & Caps Lock (`&td_shift`: Tap for Sticky Shift, Hold for Shift, Double-tap for Caps Lock).
+  - **Right Middle Thumb**: Space morphing to Backspace when Shifted (`space_bspc`: `Space` $\rightarrow$ `Shift + Space = Backspace`). Same key to go forward goes backward!
+  - **Right Inner Thumb**: Enter morphing to Delete when Shifted (`ret_del`: `Enter` $\rightarrow$ `Shift + Enter = Delete`).
+  - **Left Inner Thumb**: Smart Numword & Momentary Util (`&smart_num 2 2`: Tap for auto-disarming Numword, Hold for Util layer).
+  - **Outer Thumbs**: Dedicated `Esc` (Left Outer) and `Tab` (Right Outer).
+- **Smart Numword**: Tapping the Left Inner thumb activates the number layer. Typing numbers and operators keeps it active; typing a letter, Space, or Enter automatically disarms it.
 - **Chords for Symbols**: Vertical and horizontal 2-key combos provide all standard number-row and coding symbols directly from the base layer without switching layers.
+- **System Layer Combo**: Pressing both outer thumbs simultaneously (`Esc + Tab`) opens the System layer for Bluetooth and layout toggles.
 
 ---
 
@@ -28,8 +33,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-   [ ESC / UTIL ]   [ BACKSPACE ]   [ SHIFT / CAPS ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
-    (Hold Layer 2)   (Hold repeat)   (Tap: Shift, 2x: Caps)  (Direct)   (Direct)   (Hold Layer 3)
+    [ ESC ]       [ SHIFT / CAPS ]      [ NUM / UTIL ]         [ RET / DEL ]     [ SPC / BSPC ]     [ TAB ]
+    (Direct)   (Tap: Shift, 2x: Caps)  (Tap: Num, Hold: Util)  (Shift -> Del)    (Shift -> Bspc)   (Direct)
 ```
 
 #### Smart Punctuation on QWERTY:
@@ -51,8 +56,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-   [ ESC / UTIL ]   [ BACKSPACE ]   [ SHIFT / CAPS ]       [ ENTER ]  [ SPACE ]  [ TAB / UTIL ]
-    (Hold Layer 2)   (Hold repeat)   (Tap: Shift, 2x: Caps)  (Direct)   (Direct)   (Hold Layer 3)
+    [ ESC ]       [ SHIFT / CAPS ]      [ NUM / UTIL ]         [ RET / DEL ]     [ SPC / BSPC ]     [ TAB ]
+    (Direct)   (Tap: Shift, 2x: Caps)  (Tap: Num, Hold: Util)  (Shift -> Del)    (Shift -> Bspc)   (Direct)
 ```
 
 #### Smart Punctuation on Colemak-DH:
@@ -65,15 +70,22 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
 
 ### Shared Utility Layers (`UTIL`) — Nav, Media & Numpad / Fn-Pad
 
-*Activated by holding **either** Left Outer Thumb (`Esc`, Layer 2) or Right Outer Thumb (`Tab`, Layer 3).*
+*Activated momentarily by **holding** Left Inner Thumb (`&smart_num`), or entered via **Smart Numword** tap.*
 
 ```
        [ LEFT HAND: NAV & MEDIA ]                             [ RIGHT HAND: CLASSIC NUMPAD ]
 Top:    [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]        [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]
 Home:   [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]    [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]
 Bottom: [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]        [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]
-Thumbs:                                                     [   .   ] [   0  ]
+Thumbs:                                                     [   .   ] [ Space / Disarm ]
 ```
+
+#### Smart Numword Mechanics:
+- **Tap Left Inner Thumb**: Activates Numword.
+- **Typing numbers (`0-9`), math symbols (`* - + / =`), or decimal (`.`)** keeps Numword active.
+- **Tapping Space, Enter, or any alpha key** automatically disarms Numword and returns to the base layer.
+- **Right Inner Thumb on Util** outputs `.` (decimal point) without exiting Numword.
+- **Right Middle Thumb on Util** passes through `Space`, sending a space and immediately disarming Numword.
 
 #### Numpad to Fn-Pad Transformation:
 Every number key morphs into its corresponding F-key when Shift is active (via **Sticky Shift** or held Shift):
@@ -82,13 +94,13 @@ Every number key morphs into its corresponding F-key when Shift is active (via *
 - `/` $\rightarrow$ **`F11`**
 - `=` $\rightarrow$ **`F12`**
 
-*Example*: Tap Left Inner Thumb (`Sticky Shift`), hold Left Outer Thumb (`Esc/Util`), and tap `5` $\rightarrow$ outputs **`F5`**.
+*Example*: Tap Left Middle Thumb (`Sticky Shift`), tap Left Inner Thumb (`Numword`), and tap `5` $\rightarrow$ outputs **`F5`**.
 
 ---
 
 ### Layer 4: System Layer (`SYS`) — Bluetooth & Layout Switching
 
-*Activated automatically when holding **BOTH** Left Outer Thumb (`Esc`) and Right Outer Thumb (`Tab`) simultaneously.*
+*Activated by pressing **BOTH** Outer Thumbs (`Esc` + `Tab`, positions 36 & 41) simultaneously.*
 
 ```
 Top:    [BT_SEL 0] [BT_SEL 1] [BT_SEL 2] [BT_SEL 3] [BT_CLR]
@@ -110,16 +122,16 @@ Bottom: [RESET   ] [BOOTLOAD] [        ] [SCR_DN  ] [SCR_UP]  ...               
 
 ## 3. Thumb Key Assignments
 
-Totem provides 3 physical thumb keys per half (6 total), arranged as follows:
+Totem and Toucan provide 3 physical thumb keys per half (6 total), arranged as follows:
 
-| Hand | Position | Primary Action | Hold Action | Behavior Description |
-| :--- | :--- | :--- | :--- | :--- |
-| **Left** | Outer | `Esc` | Layer 2 (`UTIL`) | Hold to access Right-Hand Numpad with right hand free |
-| **Left** | Middle (Resting) | `Backspace` | *(None)* | Pure tap key; hold down to rapidly repeat deletion (balances `Space` on Right Middle) |
-| **Left** | Inner (Tuck) | `Sticky Shift` | `Shift` (Hold) | Tap to capitalize next stroke; hold for normal Shift |
-| **Right**| Inner (Tuck) | `Enter` | *(None)* | Pure tap key for submissions and newline |
-| **Right**| Middle (Resting) | `Space` | *(None)* | Pure tap key for typing flow |
-| **Right**| Outer | `Tab` | Layer 3 (`UTIL`) | Hold to access Left-Hand Nav/Media with left hand free |
+| Hand | Position | Primary Action | Shifted Action | Hold Action | Behavior Description |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Left** | Outer | `Esc` | `Esc` | *(None)* | Dedicated Escape key |
+| **Left** | Middle (Resting) | `Sticky Shift` | *(Caps Lock on 2x)* | `Shift` | Tap for Sticky Shift, Hold for Shift, Double-tap for Caps Lock |
+| **Left** | Inner (Tuck) | `Smart Numword` | *(None)* | Layer 2 (`UTIL`) | Tap to enter auto-disarming Numword; Hold for momentary Util |
+| **Right**| Inner (Tuck) | `Enter` | `Delete` | *(None)* | Enter; Shift + Enter sends Delete (`ret_del`) |
+| **Right**| Middle (Resting) | `Space` | `Backspace` | *(None)* | Space; Shift + Space sends Backspace (`space_bspc`) |
+| **Right**| Outer | `Tab` | `Tab` | *(None)* | Dedicated Tab key |
 
 ---
 

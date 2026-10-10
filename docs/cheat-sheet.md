@@ -22,16 +22,17 @@ Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]
                                                                         Shift:        (;)       (:)       (?)
 
                Left Thumbs                                                   Right Thumbs
-       [ ESC / UTIL ]   [ BSPC ]   [ SHIFT / CAPS ]             [ ENTER ]     [ SPACE ]    [ TAB / UTIL ]
-        Hold: L2 Util    Repeat     Tap: Shift / Hold: Shift     Direct        Direct       Hold: L3 Util
-        Tap: Escape                 2x Tap: Caps Lock
+        [ ESC ]       [ SHIFT / CAPS ]     [ NUM / UTIL ]            [ RET / DEL ]    [ SPC / BSPC ]     [ TAB ]
+        Direct        Tap: Shift / Hold    Tap: Smart Numword        Direct: Enter    Direct: Space      Direct
+                      2x Tap: Caps Lock    Hold: Util Layer          Shift -> Delete  Shift -> Backspace
 
-----------------------------------------  UTILITY LAYERS (Hold Outer Thumb)  -------------------------------------------
+----------------------------------------  UTILITY LAYERS & NUMWORD  -----------------------------------------------
       [ LEFT: MEDIA & NAV ]                                            [ RIGHT: CLASSIC NUMPAD & FN ]
 Top:    [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]             [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]
 Home:   [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]         [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]
 Bottom: [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]             [ = ]     [ 1 ]     [ 2 ]     [ 3 ]     [ + ]
-                                                                                   [ . ]     [ 0 ]
+                                                                                   [ . ]  [ Space / Disarm ]
+  Smart Numword: Tap Left Inner Thumb -> Type numbers/math. Letters/Space/Enter auto-disarm!
   With Shift (Tap Sticky Shift or hold Shift):
   1..9 -> F1..F9  |  0 -> F10  |  / -> F11  |  = -> F12
 
@@ -54,13 +55,14 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
   Right Home:  (  )
     Col2 + Col3  ->  (   (Shift -> < )                 Col3 + Col4  ->  )   (Shift -> > )
 
----------------------------------------  SMART PUNCTUATION & QUICK ESSENTIALS  -----------------------------------------
-  '  tap -> '   |  Shift + ' -> "                      Shift Thumb: Tap -> Shift  |  2x Tap -> Caps Lock
-  ,  tap -> ,   |  Shift + , -> ;
-  .  tap -> .   |  Shift + . -> :
+---------------------------------------  SMART PUNCTUATION & THUMB MORPHS  ---------------------------------------------
+  '  tap -> '   |  Shift + ' -> "                      Shift + Space -> Backspace  |  Shift + Enter -> Delete
+  ,  tap -> ,   |  Shift + , -> ;                      Tap Shift     -> Sticky Shift
+  .  tap -> .   |  Shift + . -> :                      2x Tap Shift  -> Caps Lock
   /  tap -> /   |  Shift + / -> ?
 
------------------------------------  LAYER 4: SYSTEM (Hold Both Outer Thumbs)  -----------------------------------------
+-----------------------------------  LAYER 4: SYSTEM (Combo: Esc + Tab)  -------------------------------------------
+  Press BOTH Outer Thumbs simultaneously (Esc + Tab):
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
   Home:                   [QWERT]                                        [COLE]
           (Left Index: &to 0)                                            (Right Index: &to 1)
