@@ -10,7 +10,10 @@ This document captures the design decisions, hardware configurations, and layout
 1. **Toucan 2 (Split 36-key with Nice!View displays & Azoteq TPS43 Trackpad)**:
    - Central: Left half (`nice_nano_v2` / `seeeduino_xiao_ble` with `nice_view_gem`).
    - Peripheral: Right half with onboard Azoteq IQS5xx capacitive trackpad over I2C.
-   - Transmit power: `CONFIG_BT_CTLR_TX_PWR_PLUS_8=y`, `CONFIG_BT_CTLR_PHY_2M=n` for maximum BLE stability.
+   - Bluetooth Performance:
+     - `CONFIG_BT_CTLR_TX_PWR_PLUS_8=y`: Maximum +8 dBm transmit power.
+     - `CONFIG_BT_CTLR_PHY_2M=y`: 2M PHY enabled for 2x on-air data rate.
+     - `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y`: Low-latency 7.5ms split BLE connection intervals to eliminate trackpad jitter.
    - Power Management:
      - Idle timeout: 30 seconds (`CONFIG_ZMK_IDLE_TIMEOUT=30000`).
      - Deep sleep timeout: 5 minutes (`CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=300000`) to match macOS lock screen.
@@ -67,10 +70,28 @@ This document captures the design decisions, hardware configurations, and layout
 
 ## 3. Build & Flash Workflows
 
-- Run `just build <target>` from repo root:
-  - `just build toucan-left-central` $\rightarrow$ `firmware/toucan-left-central.uf2`
-  - `just build toucan-right-peripheral` $\rightarrow$ `firmware/toucan-right-peripheral.uf2`
-  - `just build totem-display-central` $\rightarrow$ `firmware/totem-display-central.uf2`
+### Compiling Firmware
+- `just build toucan-left-central` $\rightarrow$ `firmware/toucan-left-central.uf2`
+- `just build toucan-right-peripheral` $\rightarrow$ `firmware/toucan-right-peripheral.uf2`
+- `just build totem-display-central` $\rightarrow$ `firmware/totem-display-central.uf2`
+
+### Automated Flashing
+- Run `just flash <target>` (e.g. `just flash toucan-left-central`):
+  - Uses `scripts/flash.sh` to poll `/Volumes/` for a UF2 bootloader drive (`XIAO-BOOT`, `NICENANO`, etc.).
+  - As soon as the board enters bootloader mode via physical reset double-tap, it copies the `.uf2` file, waits for unmount/reboot, and chimes when complete.
 - Split central architecture:
-  - All keymaps, layers, combos, and macros reside 100% on Central.
+  - Keymaps, layers, combos, and macros reside 100% on Central.
   - Reflashing peripheral is only required when changing hardware pins, trackpad settings, or power states.
+
+---
+
+## 4. Operational Rules & User Preferences
+
+1. **Git Remote Policy**:
+   - **NEVER run `git push` without explicit user permission.** Keep all commits local until the user explicitly requests a push.
+2. **Mac Shortcut Ergonomics**:
+   - Tab switching in Chrome, Safari, and Terminal is best executed via `Ctrl + Tab`:
+     - Hold Left Pinky (`A` = `Ctrl`) + Tap Right Outer Thumb (`Tab`).
+3. **Password Best Practices for 36 Keys**:
+   - Use NIST Diceware passphrases (`word word word 99!`) on the base layer with space or hyphen separators.
+   - Maximize Apple Watch Auto-Unlock for macOS and Touch ID / Apple Watch for 1Password master unlock.
