@@ -57,13 +57,13 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
 
-        /* Home Row Mods - Balanced with 250ms prior-idle to eliminate typing lag */
+        /* Home Row Mods - Tap-Preferred with Prior Idle & Bilateral Isolation */
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <250>;
-            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <RIGHT_SIDE_KEYS>;
@@ -73,9 +73,9 @@
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <250>;
-            tapping-term-ms = <280>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <210>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <LEFT_SIDE_KEYS>;
