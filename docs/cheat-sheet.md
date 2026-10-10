@@ -31,8 +31,8 @@ Bottom: [ Z ]     [ X ]     [ C ]     [ D ]     [ V ]            [ K ]     [ H ]
 Top:    [ / ]     [ 7 ]     [ 8 ]     [ 9 ]     [ * ]             [ HOME ]  [PG_DN ]  [PG_UP ]  [ END  ]  [ DEL  ]
 Home:   [ 0 ]     [ 4 ]     [ 5 ]     [ 6 ]     [ - ]             [ LEFT ]  [ DOWN ]  [  UP  ]  [RIGHT ]  [PLAY/PAUSE]
 Bottom: [ = ]     [ 1 ]     [ 2 ]     [ 3 ]     [ + ]             [ MUTE ]  [VOL_DN]  [VOL_UP]  [ PREV ]  [ NEXT ]
-                   [ . ]                                                     [ Enter / Disarm ] [ Space / Disarm ]
-  Smart Numword: Tap Left Inner Thumb -> Type numbers/math. Letters/Space/Enter auto-disarm!
+        [ . ]         [ Shift ]            [ Exit / Disarm ]           [ Enter / Disarm ] [ Space / Disarm ]
+  Smart Numword: Tap Left Inner Thumb -> Type numbers/math. Letters/Space/Enter/Util Thumb auto-disarm!
   With Shift (Tap Sticky Shift or hold Shift):
   1..9 -> F1..F9  |  0 -> F10  |  / -> F11  |  = -> F12
 

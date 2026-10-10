@@ -78,16 +78,17 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
 Top:    [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]        [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]
 Home:   [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]        [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]
 Bottom: [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]        [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]
-Thumbs:                     [   .   ]                       [ Enter / Disarm ] [ Space / Disarm ]
+Thumbs:     [   .   ]       [ Shift ] [ Exit / Disarm ]         [ Enter / Disarm ] [ Space / Disarm ]
 ```
 
 #### Smart Numword Mechanics:
 - **Tap Left Inner Thumb**: Activates Numword.
 - **Typing numbers (`0-9`), math symbols (`* - + / =`), or decimal (`.`)** keeps Numword active.
 - **Tapping Space, Enter, or any alpha key** automatically disarms Numword and returns to the base layer.
-- **Left Inner Thumb on Util** outputs `.` (decimal point) without exiting Numword.
-- **Right Inner Thumb on Util** passes through `Enter`, submitting and immediately disarming Numword.
-- **Right Middle Thumb on Util** passes through `Space`, sending a space and immediately disarming Numword.
+- **Left Outer Thumb on Util**: Outputs `.` (decimal point) without exiting Numword.
+- **Left Inner Thumb on Util**: Tapping it again immediately disarms/exits Numword (toggle off).
+- **Right Inner Thumb on Util**: Passes through `Enter`, submitting and immediately disarming Numword.
+- **Right Middle Thumb on Util**: Passes through `Space`, sending a space and immediately disarming Numword.
 
 #### Numpad to Fn-Pad Transformation:
 Every number key morphs into its corresponding F-key when Shift is active (via **Sticky Shift** or held Shift):

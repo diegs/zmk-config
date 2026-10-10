@@ -46,7 +46,7 @@ This document captures the design decisions, hardware configurations, and layout
     - With Shift (or sticky shift): Numpad transforms into `F1`–`F12`.
   - Right Grid: Vim HJKL navigation (`LEFT`, `DOWN`, `UP`, `RIGHT`) with `HOME`, `PGDN`, `PGUP`, `END`, and `DEL` on pinky.
   - Media controls: Volume up/down, mute, play/pause, prev/next.
-  - Thumbs on Util: Pass-through `Enter` and `Space` (auto-disarming Numword), decimal point `.` on Left Inner.
+  - Thumbs on Util: Decimal point `.` on Left Outer (where Esc is), `Exit / Disarm` on Left Inner (tapping util thumb exits keypad mode), and pass-through `Enter` / `Space` (auto-disarming Numword).
 - **Layer 3: UTILITY (Right Trigger)**:
   - Mirrors Layer 2.
 - **Layer 4: SYSTEM (Hold Both Esc + Tab Thumbs)**:
