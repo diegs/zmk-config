@@ -43,6 +43,10 @@ build expr *west_args:
         just _build_single "$board" "$shield" "$snippet" "$artifact" "$cmake_args" {{ west_args }}
     done
 
+# flash firmware to device waiting for bootloader mount
+flash target:
+    @./scripts/flash.sh {{ target }}
+
 # clear build cache and artifacts
 clean:
     rm -rf {{ build }} {{ out }}
