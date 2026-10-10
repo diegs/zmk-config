@@ -391,7 +391,7 @@
 
         /* Layer 0: Unified 36-key QWERTY Base */
         base_layer {
-            display-name = "QWERTY";
+            display-name = "QWERT";
             bindings = <
 &none  &kp Q         &kp W          &kp E         &kp R         &kp T            &kp Y       &kp U         &kp I         &kp O         &kp P          &none
 &none  &hml LCTRL A  &hml LEFT_ALT S &hml LGUI D  &kp F         &kp G            &kp H       &kp J         &hmr RGUI K   &hmr RALT L   &hmr RCTRL SQT &none
@@ -402,7 +402,7 @@
 
         /* Layer 1: Unified 36-key Colemak-DH Base */
         colemak_layer {
-            display-name = "COL-DH";
+            display-name = "COLE";
             bindings = <
 &none  &kp Q         &kp W          &kp F         &kp P         &kp B            &kp J       &kp L         &kp U         &kp Y         &kp SQT        &none
 &none  &hml LCTRL A  &hml LEFT_ALT R &hml LGUI S  &kp T         &kp G            &kp M       &kp N         &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &none

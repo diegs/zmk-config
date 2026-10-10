@@ -5,7 +5,7 @@
                                       TOTEM & TOUCAN — 36-KEY UNIFIED REFERENCE
 ========================================================================================================================
 
------------------------------------------  LAYER 0: QWERTY BASE LAYER  -------------------------------------------------
+-------------------------------------  LAYER 0: QWERTY BASE LAYER (QWERT)  ---------------------------------------------
       [ LEFT HAND ]                                                    [ RIGHT HAND ]
 Top:    [ Q ]     [ W ]     [ E ]     [ R ]     [ T ]            [ Y ]     [ U ]     [ I ]     [ O ]     [ P ]
 Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]     [ K ]     [ L ]     [ ' ]
@@ -13,7 +13,7 @@ Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]
 Bottom: [ Z ]     [ X ]     [ C ]     [ V ]     [ B ]            [ N ]     [ M ]     [ , ]     [ . ]     [ / ]
                                                                         Shift:        (;)       (:)       (?)
 
----------------------------------------  LAYER 1: COLEMAK-DH BASE LAYER  -----------------------------------------------
+-----------------------------------  LAYER 1: COLEMAK-DH BASE LAYER (COLE)  --------------------------------------------
       [ LEFT HAND ]                                                    [ RIGHT HAND ]
 Top:    [ Q ]     [ W ]     [ F ]     [ P ]     [ B ]            [ J ]     [ L ]     [ U ]     [ Y ]     [ ' ]
 Home:   [ A ]     [ R ]     [ S ]     [ T ]     [ G ]            [ M ]     [ N ]     [ E ]     [ I ]     [ O ]
@@ -62,7 +62,7 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
 
 -----------------------------------  LAYER 4: SYSTEM (Hold Both Outer Thumbs)  -----------------------------------------
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
-  Home:                   [QWERTY]                                       [COL-DH]
+  Home:                   [QWERT]                                        [COLE]
           (Left Index: &to 0)                                            (Right Index: &to 1)
   Bottom: [RESET] [BOOTLOADER]            [BRIGHT-] [BRIGHT+]  ...       [RESET]
 ========================================================================================================================
