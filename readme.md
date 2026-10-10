@@ -28,19 +28,17 @@ This repository uses a self-contained [Nix Flake](flake.nix) providing the Zephy
 just list
 
 # Build Totem targets
-just build totem-dongle    # Small dongle (Raytac MDBT50Q-RX)
-just build totem-display   # Display dongle (Seeed XIAO BLE + ST7789 screen)
-just build totem-left      # Left half (Peripheral)
-just build totem-right     # Right half (Peripheral)
+just build totem-display-central  # Display dongle (Seeed XIAO BLE + ST7789 screen, Central)
+just build totem-dongle-central   # Small dongle (Raytac MDBT50Q-RX, Central)
+just build totem-left-peripheral  # Left half (Peripheral)
+just build totem-right-peripheral # Right half (Peripheral)
 
 # Build Toucan targets (Standalone: Left is Central with Built-in Display)
-just build toucan-display   # Left half (Central + Built-in nice!view Display + Trackpad)
-just build toucan-right     # Right half (Peripheral + Trackpad)
+just build toucan-left-central    # Left half (Central + Built-in nice!view Display)
+just build toucan-right-peripheral # Right half (Peripheral + TPS43 Trackpad)
 
 # Build Toucan targets (With Small Dongle)
-just build toucan-dongle            # Small dongle (Raytac MDBT50Q-RX)
-just build toucan-left-peripheral   # Left half (Peripheral)
-just build toucan-right-peripheral  # Right half (Peripheral)
+just build toucan-dongle-central  # Small dongle (Raytac MDBT50Q-RX, Central)
 ```
 
 Compiled `.uf2` binaries are output to the [`firmware/`](firmware/) directory.
