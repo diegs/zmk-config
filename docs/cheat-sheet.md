@@ -66,6 +66,6 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
   Home:                   [QWERT]                                        [COLE]
           (Left Index: &to 0)                                            (Right Index: &to 1)
-  Bottom: [RESET] [BOOTLOADER]            [BRIGHT-] [BRIGHT+]  ...       [RESET]
+  Bottom: [RESET] [BOOTLOADER]            [BRI-]  [BRI+]    [DNG-]  [DNG+]            [BOOTLOAD] [RESET]
 ========================================================================================================================
 ```

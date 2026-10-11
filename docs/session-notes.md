@@ -55,7 +55,9 @@ This document captures the design decisions, hardware configurations, and layout
 - **Layer 4: SYSTEM (Hold Both Esc + Tab Thumbs)**:
   - Left Index (`&to 0`): Instant switch to QWERTY.
   - Right Index (`&to 1`): Instant switch to Colemak-DH.
-  - Bluetooth profiles (0–3), BT clear, resets, and bootloader triggers.
+  - Screen brightness controls (`&kp C_BRI_DN` / `&kp C_BRI_UP`) on left bottom index/inner keys.
+  - Dongle display backlight brightness (`&kp F23` / `&kp F24`) on right bottom inner/index keys.
+  - Bluetooth profiles (0–3), BT clear, symmetric resets, and bootloader triggers.
 
 ### Combos & Chords
 - **Vertical Chords (Number Row Symbols)**:

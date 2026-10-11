@@ -108,7 +108,7 @@ Every number key morphs into its corresponding F-key when Shift is active (via *
 ```
 Top:    [BT_SEL 0] [BT_SEL 1] [BT_SEL 2] [BT_SEL 3] [BT_CLR]
 Home:                        [QWERTY]                                [COL-DH]
-Bottom: [RESET   ] [BOOTLOAD] [        ] [SCR_DN  ] [SCR_UP]  ...                       [RESET]
+Bottom: [RESET   ] [BOOTLOAD] [        ] [BRI_DN  ] [BRI_UP ] [DNG_DN  ] [DNG_UP  ] [        ] [BOOTLOAD] [RESET]
 ```
 
 - **Layout Switching**:
@@ -117,9 +117,11 @@ Bottom: [RESET   ] [BOOTLOAD] [        ] [SCR_DN  ] [SCR_UP]  ...               
 - **Bluetooth Controls**:
   - **`BT_SEL 0 - 3`**: Switch Bluetooth profile.
   - **`BT_CLR`**: Clear Bluetooth bond for current profile.
-- **Display & Hardware**:
-  - **`SCR_DN / UP`** (`F23 / F24`): Adjust dongle display brightness.
-  - **`RESET / BOOTLOAD`**: Soft reboot or enter UF2 bootloader mode.
+- **Display & Brightness**:
+  - **`BRI_DN / UP`** (`&kp C_BRI_DN` / `&kp C_BRI_UP`): Adjust host computer/monitor screen brightness.
+  - **`DNG_DN / UP`** (`&kp F23` / `&kp F24`): Adjust dongle display backlight brightness (if using dongle screen).
+- **Reset & Bootloader**:
+  - **`RESET / BOOTLOAD`**: Soft reboot or enter UF2 bootloader mode (symmetrically available on both halves).
 
 ---
 
