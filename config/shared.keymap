@@ -239,10 +239,9 @@
 
         /* System Layer Combo: Esc + Tab (Both Outer Thumbs) */
         combo_sys {
-            timeout-ms = <200>;
+            timeout-ms = <50>;
             key-positions = <36 41>;
             bindings = <&mo 4>;
-            slow-release;
         };
 
         /* Horizontal Brackets & Delimiters */
@@ -453,7 +452,7 @@
 &none  &num_f11   &num_f7      &num_f8      &num_f9      &kp ASTRK        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp DEL          &none
 &none  &num_f0    &num_f4      &num_f5      &num_f6      &kp MINUS        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_PLAY_PAUSE &none
 &none  &num_f12   &num_f1      &num_f2      &num_f3      &kp PLUS         &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &none
-                                &kp DOT      &trans       &trans           &trans     &trans     &mo 4
+                                &kp DOT      &trans       &trans           &trans     &trans     &trans
             >;
         };
 
@@ -464,7 +463,7 @@
 &none  &num_f11   &num_f7      &num_f8      &num_f9      &kp ASTRK        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp DEL          &none
 &none  &num_f0    &num_f4      &num_f5      &num_f6      &kp MINUS        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_PLAY_PAUSE &none
 &none  &num_f12   &num_f1      &num_f2      &num_f3      &kp PLUS         &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &none
-                                &kp DOT      &trans       &trans           &trans     &trans     &mo 4
+                                &kp DOT      &trans       &trans           &trans     &trans     &trans
             >;
         };
 
