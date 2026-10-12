@@ -56,7 +56,7 @@ This document captures the design decisions, hardware configurations, and layout
   - Activated automatically via `tri_layer` whenever both outer thumbs are held simultaneously.
   - Left Index (`&to 0`): Instant switch to QWERTY.
   - Right Index (`&to 1`): Instant switch to Colemak-DH.
-  - Screen brightness controls (`&kp C_BRI_DN` / `&kp C_BRI_UP`) on left bottom index/inner keys.
+  - Screen brightness controls (`&kp F14` / `&kp F15` for macOS) on left bottom index/inner keys.
   - Dongle display backlight brightness (`&kp F23` / `&kp F24`) on right bottom inner/index keys.
   - Bluetooth profiles (0–3), BT clear, symmetric resets, and bootloader triggers.
 

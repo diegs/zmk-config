@@ -118,7 +118,7 @@ Bottom: [RESET   ] [BOOTLOAD] [        ] [BRI_DN  ] [BRI_UP ] [DNG_DN  ] [DNG_UP
   - **`BT_SEL 0 - 3`**: Switch Bluetooth profile.
   - **`BT_CLR`**: Clear Bluetooth bond for current profile.
 - **Display & Brightness**:
-  - **`BRI_DN / UP`** (`&kp C_BRI_DN` / `&kp C_BRI_UP`): Adjust host computer/monitor screen brightness.
+  - **`BRI_DN / UP`** (`&kp F14` / `&kp F15`): Adjust host computer/monitor screen brightness (native macOS brightness keys).
   - **`DNG_DN / UP`** (`&kp F23` / `&kp F24`): Adjust dongle display backlight brightness (if using dongle screen).
 - **Reset & Bootloader**:
   - **`RESET / BOOTLOAD`**: Soft reboot or enter UF2 bootloader mode (symmetrically available on both halves).

@@ -466,7 +466,7 @@
             bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR       &none       &none     &none     &none     &none      &none
 &none  &none         &none         &none         &to 0         &none            &none       &to 1     &none     &none     &none      &none
-&none  &sys_reset    &bootloader   &none         &kp C_BRI_DN  &kp C_BRI_UP     &kp F23     &kp F24   &none     &bootloader &sys_reset &none
+&none  &sys_reset    &bootloader   &none         &kp F14       &kp F15          &kp F23     &kp F24   &none     &bootloader &sys_reset &none
                                    &trans        &trans        &trans           &trans      &trans    &trans
             >;
         };
