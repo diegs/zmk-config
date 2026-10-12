@@ -17,7 +17,7 @@ This document describes the unified 36-key layout used across both the **Totem**
 - **Forward Delete**: Positioned on the top-right pinky of the Util layer (`HOME`, `PGDN`, `PGUP`, `END`, `DEL`).
 - **Smart Numword**: Tapping the Left Inner thumb activates the number layer. Typing numbers and operators keeps it active; typing a letter, Space, or Enter automatically disarms it.
 - **Chords for Symbols**: Vertical and horizontal 2-key combos provide all standard number-row and coding symbols directly from the base layer without switching layers.
-- **System Layer Combo**: Pressing both outer thumbs simultaneously (`Esc + Tab`) opens the System layer for Bluetooth and layout toggles.
+- **System Layer (Tri-Layer)**: Holding both outer thumbs (`Esc + Tab`) opens the System layer for Bluetooth and layout toggles with zero timing pressure.
 
 ---
 
@@ -103,7 +103,7 @@ Every number key morphs into its corresponding F-key when Shift is active (via *
 
 ### Layer 4: System Layer (`SYS`) — Bluetooth & Layout Switching
 
-*Activated by pressing **BOTH** Outer Thumbs (`Esc` + `Tab`, positions 36 & 41) simultaneously.*
+*Activated automatically when holding **BOTH** Outer Thumbs (`Esc` + `Tab`) simultaneously (tri-layer style).*
 
 ```
 Top:    [BT_SEL 0] [BT_SEL 1] [BT_SEL 2] [BT_SEL 3] [BT_CLR]
@@ -131,12 +131,12 @@ Totem and Toucan provide 3 physical thumb keys per half (6 total), arranged as f
 
 | Hand | Position | Primary Action | Shifted Action | Hold Action | Behavior Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Left** | Outer | `Esc` | `Esc` | *(None)* | Dedicated Escape key |
+| **Left** | Outer | `Esc` | `Esc` | Layer 2 (`UTIL`) | Tap for `Esc`, Hold for `UTIL` (`&lt 2 ESC`). Hold with Right Outer for `SYS` |
 | **Left** | Middle (Resting) | `Sticky Shift` | *(Caps Lock on 2x)* | `Shift` | Tap for Sticky Shift, Hold for Shift, Double-tap for Caps Lock |
 | **Left** | Inner (Tuck) | `Smart Numword` | *(None)* | Layer 2 (`UTIL`) | Tap to enter auto-disarming Numword; Hold for momentary Util |
 | **Right**| Inner (Tuck) | `Enter` | `Shift + Enter` | *(None)* | Dedicated Enter key (`Shift + Enter` preserved for chat/newlines) |
 | **Right**| Middle (Resting) | `Space` | `Backspace` | *(None)* | Space; Shift + Space sends Backspace (`space_bspc`) |
-| **Right**| Outer | `Tab` | `Tab` | *(None)* | Dedicated Tab key |
+| **Right**| Outer | `Tab` | `Tab` | Layer 3 (`UTIL`) | Tap for `Tab`, Hold for `UTIL` (`&lt 3 TAB`). Hold with Left Outer for `SYS` |
 
 ---
 

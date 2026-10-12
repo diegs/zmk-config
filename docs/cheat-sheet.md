@@ -61,8 +61,8 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
   .  tap -> .   |  Shift + . -> :                      2x Tap Shift  -> Caps Lock
   /  tap -> /   |  Shift + / -> ?
 
------------------------------------  LAYER 4: SYSTEM (Combo: Esc + Tab)  -------------------------------------------
-  Press BOTH Outer Thumbs simultaneously (Esc + Tab):
+-----------------------------------  LAYER 4: SYSTEM (Hold Both Outer Thumbs)  --------------------------------------
+  Hold BOTH Outer Thumbs together (Esc + Tab):
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
   Home:                   [QWERT]                                        [COLE]
           (Left Index: &to 0)                                            (Right Index: &to 1)
