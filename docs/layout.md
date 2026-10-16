@@ -23,7 +23,7 @@ This document describes the unified 36-key layout used across both the **Totem**
 
 ## 2. Layer Diagrams
 
-### Layer 0: QWERTY Base (`QWERT`)
+### Layer 0: QWERTY Base (`BASE`)
 
 ```
        [ LEFT HAND ]                                          [ RIGHT HAND ]

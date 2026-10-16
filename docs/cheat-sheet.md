@@ -5,7 +5,7 @@
                                       TOTEM & TOUCAN — 36-KEY UNIFIED REFERENCE
 ========================================================================================================================
 
--------------------------------------  LAYER 0: QWERTY BASE LAYER (QWERT)  ---------------------------------------------
+-------------------------------------  LAYER 0: QWERTY BASE LAYER (BASE)  ----------------------------------------------
       [ LEFT HAND ]                                                    [ RIGHT HAND ]
 Top:    [ Q ]     [ W ]     [ E ]     [ R ]     [ T ]            [ Y ]     [ U ]     [ I ]     [ O ]     [ P ]
 Home:   [ A ]     [ S ]     [ D ]     [ F ]     [ G ]            [ H ]     [ J ]     [ K ]     [ L ]     [ ' ]
@@ -64,7 +64,7 @@ Press Top + Home or Home + Bottom simultaneously with ONE finger pad bridging th
 -----------------------------------  LAYER 4: SYSTEM (Hold Both Outer Thumbs)  --------------------------------------
   Hold BOTH Outer Thumbs together (Esc + Tab):
   Top:    [BT 0]  [BT 1]  [BT 2]  [BT 3]  [BT CLR]
-  Home:                   [QWERT]                                        [COLE]
+  Home:                   [BASE]                                         [COLE]
           (Left Index: &to 0)                                            (Right Index: &to 1)
   Bottom: [RESET] [BOOTLOADER]            [BRI-]  [BRI+]    [DNG-]  [DNG+]            [BOOTLOAD] [RESET]
 ========================================================================================================================
