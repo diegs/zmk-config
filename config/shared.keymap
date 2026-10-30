@@ -32,7 +32,7 @@
  * Top:    [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]        [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]
  * Home:   [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]        [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]
  * Bottom: [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]        [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]
- * Thumbs:  [   .  ]       [ Shift ] [ Exit/Disarm ]             [ Enter/Disarm ] [ Space/Disarm ]
+ * Thumbs:  [ Esc  ]       [ Shift ] [     .     ]               [ Cmd+Enter ]  [ Cmd+Space ]  [ Cmd+Tab ]
  *
  * === SYSTEM LAYER 4 (Hold BOTH Left Esc and Right Tab) ===
  * Top:    [BT_SEL 0] [BT_SEL 1] [BT_SEL 2] [BT_SEL 3] [BT_CLR]
@@ -81,14 +81,6 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <LEFT_SIDE_KEYS>;
             hold-trigger-on-release;
-        };
-
-        /* Tap-Dance Shift: Tap/Hold for Sticky Shift, Double-tap for Caps Lock */
-        td_shift: tap_dance_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&sk LSHFT>, <&kp CAPS>;
         };
 
         /* Smart Numword / Momentary Util: Tap for Numword, Hold for Util Layer */
@@ -403,6 +395,14 @@
             bindings = <&kp PIPE>;
             require-prior-idle-ms = <150>;
         };
+
+        /* Utility Thumb Chord: Space + Tab on Util layers -> Cmd+` (Cycle app windows) */
+        combo_cmd_grave {
+            timeout-ms = <40>;
+            key-positions = <40 41>;
+            bindings = <&kp LG(GRAVE)>;
+            layers = <2 3>;
+        };
     };
 
     conditional_layers {
@@ -423,7 +423,7 @@
 &none  &kp Q         &kp W          &kp E         &kp R         &kp T            &kp Y       &kp U         &kp I         &kp O         &kp P          &none
 &none  &hml LCTRL A  &hml LEFT_ALT S &hml LGUI D  &kp F         &kp G            &kp H       &kp J         &hmr RGUI K   &hmr RALT L   &hmr RCTRL SQT &none
 &none  &kp Z         &kp X          &kp C         &kp V         &kp B            &kp N       &kp M         &comma_morph  &dot_morph    &kp SLASH      &none
-                                    &lt 2 ESC     &td_shift     &smart_num 2 2   &kp RET     &space_bspc   &lt 3 TAB
+                                    &lt 2 ESC     &sk LSHFT     &smart_num 2 2   &kp RET     &space_bspc   &lt 3 TAB
             >;
         };
 
@@ -434,7 +434,7 @@
 &none  &kp Q         &kp W          &kp F         &kp P         &kp B            &kp J       &kp L         &kp U         &kp Y         &kp SQT        &none
 &none  &hml LCTRL A  &hml LEFT_ALT R &hml LGUI S  &kp T         &kp G            &kp M       &kp N         &hmr RGUI E   &hmr RALT I   &hmr RCTRL O   &none
 &none  &kp Z         &kp X          &kp C         &kp D         &kp V            &kp K       &kp H         &comma_morph  &dot_morph    &kp SLASH      &none
-                                    &lt 2 ESC     &td_shift     &smart_num 2 2   &kp RET     &space_bspc   &lt 3 TAB
+                                    &lt 2 ESC     &sk LSHFT     &smart_num 2 2   &kp RET     &space_bspc   &lt 3 TAB
             >;
         };
 
@@ -445,7 +445,7 @@
 &none  &num_f11   &num_f7      &num_f8      &num_f9      &kp ASTRK        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp DEL          &none
 &none  &num_f0    &num_f4      &num_f5      &num_f6      &kp MINUS        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_PLAY_PAUSE &none
 &none  &num_f12   &num_f1      &num_f2      &num_f3      &kp PLUS         &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &none
-                                &trans       &trans       &kp DOT          &kp LG(RET) &trans     &trans
+                                &trans       &trans       &kp DOT          &kp LG(RET) &kp LG(SPACE) &lt 3 LG(TAB)
             >;
         };
 
@@ -456,7 +456,7 @@
 &none  &num_f11   &num_f7      &num_f8      &num_f9      &kp ASTRK        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp DEL          &none
 &none  &num_f0    &num_f4      &num_f5      &num_f6      &kp MINUS        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_PLAY_PAUSE &none
 &none  &num_f12   &num_f1      &num_f2      &num_f3      &kp PLUS         &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &kp C_PREV &kp C_NEXT   &none
-                                &trans       &trans       &kp DOT          &kp LG(RET) &trans     &trans
+                                &trans       &trans       &kp DOT          &kp LG(RET) &kp LG(SPACE) &lt 3 LG(TAB)
             >;
         };
 

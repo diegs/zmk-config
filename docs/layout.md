@@ -9,7 +9,7 @@ This document describes the unified 36-key layout used across both the **Totem**
 - **Unified 36-Key Muscle Memory**: Although both keyboards use a 42-key logical matrix under ZMK, all outer-column extra keys are disabled (`&none`). Whether typing on the Totem or Toucan, your fingers hit the exact same physical keys.
 - **Timeless Homerow Mods (HRM)**: Configured with `flavor = "balanced"`, `tapping-term-ms = <280>`, and `require-prior-idle-ms = <250>`. In-flow typing resolves instantly to letters on key-down (zero latency), while deliberate modifier chords fire without timer delays.
 - **Ergonomic Thumbs & Shift Morphs**:
-  - **Left Middle Thumb**: Shift & Caps Lock (`&td_shift`: Tap for Sticky Shift, Hold for Shift, Double-tap for Caps Lock).
+  - **Left Middle Thumb**: Sticky Shift (`&sk LSHFT`: Tap for Sticky Shift, Hold for Shift).
   - **Right Middle Thumb**: Space morphing to Backspace when Shifted (`space_bspc`: `Space` $\rightarrow$ `Shift + Space = Backspace`). Same key to go forward goes backward!
   - **Right Inner Thumb**: Dedicated `Enter` key (`Shift + Enter` is preserved for newlines in chat/documents).
   - **Left Inner Thumb**: Smart Numword & Momentary Util (`&smart_num 2 2`: Tap for auto-disarming Numword, Hold for Util layer).
@@ -34,8 +34,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ V ]  [ B ]               [ N ]  [ M ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-    [ ESC ]       [ SHIFT / CAPS ]      [ NUM / UTIL ]            [ ENTER ]       [ SPC / BSPC ]     [ TAB ]
-    (Direct)   (Tap: Shift, 2x: Caps)  (Tap: Num, Hold: Util)     (Direct)        (Shift -> Bspc)   (Direct)
+    [ ESC ]       [ STICKY SHIFT ]     [ NUM / UTIL ]            [ ENTER ]       [ SPC / BSPC ]     [ TAB ]
+    (Direct)      (Tap/Hold Shift)  (Tap: Num, Hold: Util)       (Direct)        (Shift -> Bspc)   (Direct)
 ```
 
 #### Smart Punctuation on QWERTY:
@@ -57,8 +57,8 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
                                                                       (;)    (:)    (?)
 
           Left Thumbs                                             Right Thumbs
-    [ ESC ]       [ SHIFT / CAPS ]      [ NUM / UTIL ]            [ ENTER ]       [ SPC / BSPC ]     [ TAB ]
-    (Direct)   (Tap: Shift, 2x: Caps)  (Tap: Num, Hold: Util)     (Direct)        (Shift -> Bspc)   (Direct)
+    [ ESC ]       [ STICKY SHIFT ]     [ NUM / UTIL ]            [ ENTER ]       [ SPC / BSPC ]     [ TAB ]
+    (Direct)      (Tap/Hold Shift)  (Tap: Num, Hold: Util)       (Direct)        (Shift -> Bspc)   (Direct)
 ```
 
 #### Smart Punctuation on Colemak-DH:
@@ -78,17 +78,18 @@ Bottom: [ Z ]  [ X ]  [ C ]  [ D ]  [ V ]               [ K ]  [ H ]  [ , ]  [ .
 Top:    [ F11// ] [ 7/F7 ] [ 8/F8 ] [ 9/F9 ] [  *  ]        [ HOME ] [PG_DN ] [PG_UP ] [ END  ] [ DEL  ]
 Home:   [ 0/F10 ] [ 4/F4 ] [ 5/F5 ] [ 6/F6 ] [  -  ]        [ LEFT ] [ DOWN ] [  UP  ] [RIGHT ] [PLAY/PAUSE]
 Bottom: [ F12/= ] [ 1/F1 ] [ 2/F2 ] [ 3/F3 ] [  +  ]        [ MUTE ] [VOL_DN] [VOL_UP] [ PREV ] [ NEXT ]
-Thumbs:     [   .   ]       [ Shift ] [ Exit / Disarm ]         [ Enter / Disarm ] [ Space / Disarm ]
+Thumbs:     [  Esc  ]       [ Shift ] [     .     ]           [ Cmd+Enter ]  [ Cmd+Space ]  [ Cmd+Tab ]
 ```
 
-#### Smart Numword Mechanics:
+#### Smart Numword & Util Thumb Mechanics:
 - **Tap Left Inner Thumb**: Activates Numword.
 - **Typing numbers (`0-9`), math symbols (`* - + / =`), or decimal (`.`)** keeps Numword active.
-- **Tapping Space, Enter, or any alpha key** automatically disarms Numword and returns to the base layer.
-- **Left Outer Thumb on Util**: Outputs `.` (decimal point) without exiting Numword.
-- **Left Inner Thumb on Util**: Tapping it again immediately disarms/exits Numword (toggle off).
-- **Right Inner Thumb on Util**: Passes through `Enter`, submitting and immediately disarming Numword.
-- **Right Middle Thumb on Util**: Passes through `Space`, sending a space and immediately disarming Numword.
+- **Tapping any alpha key or non-continue key** automatically disarms Numword and returns to the base layer.
+- **Left Inner Thumb on Util**: Outputs `.` (decimal point) without exiting Numword.
+- **Right Inner Thumb on Util**: Sends `Cmd + Enter` (`&kp LG(RET)`) and disarms Numword.
+- **Right Middle Thumb on Util**: Sends `Cmd + Space` (`&kp LG(SPACE)`) and disarms Numword.
+- **Right Outer Thumb on Util**: Tapping sends `Cmd + Tab` (`&lt 3 LG(TAB)`), while holding with Left Outer still activates the `SYS` tri-layer.
+- **Right Middle + Outer Thumb Chord on Util (`Space + Tab`)**: Sends ``Cmd + ` `` (`&kp LG(GRAVE)`) to cycle windows of the active macOS application.
 
 #### Numpad to Fn-Pad Transformation:
 Every number key morphs into its corresponding F-key when Shift is active (via **Sticky Shift** or held Shift):
@@ -132,7 +133,7 @@ Totem and Toucan provide 3 physical thumb keys per half (6 total), arranged as f
 | Hand | Position | Primary Action | Shifted Action | Hold Action | Behavior Description |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Left** | Outer | `Esc` | `Esc` | Layer 2 (`UTIL`) | Tap for `Esc`, Hold for `UTIL` (`&lt 2 ESC`). Hold with Right Outer for `SYS` |
-| **Left** | Middle (Resting) | `Sticky Shift` | *(Caps Lock on 2x)* | `Shift` | Tap for Sticky Shift, Hold for Shift, Double-tap for Caps Lock |
+| **Left** | Middle (Resting) | `Sticky Shift` | `Shift` | `Shift` | Tap for Sticky Shift, Hold for Shift (`&sk LSHFT`) |
 | **Left** | Inner (Tuck) | `Smart Numword` | *(None)* | Layer 2 (`UTIL`) | Tap to enter auto-disarming Numword; Hold for momentary Util |
 | **Right**| Inner (Tuck) | `Enter` | `Shift + Enter` | *(None)* | Dedicated Enter key (`Shift + Enter` preserved for chat/newlines) |
 | **Right**| Middle (Resting) | `Space` | `Backspace` | *(None)* | Space; Shift + Space sends Backspace (`space_bspc`) |

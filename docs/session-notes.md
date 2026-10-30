@@ -37,7 +37,7 @@ This document captures the design decisions, hardware configurations, and layout
   - HRM timing: `tapping-term-ms = <210>`, `quick-tap-ms = <150>`, `require-prior-idle-ms = <150>`.
   - Dedicated thumbs:
     - Left Outer: `&lt 2 ESC` (Tap = Esc, Hold = Util Layer 2)
-    - Left Middle: `&td_shift` (Tap = Sticky Shift, Double-tap = Caps Lock)
+    - Left Middle: `&sk LSHFT` (Tap = Sticky Shift, Hold = Shift)
     - Left Inner: `&smart_num 2 2` (Tap = Smart Numword, Hold = Util Layer 2)
     - Right Inner: `&kp RET` (Pure Enter; `Shift + Enter` preserved for chat newlines)
     - Right Middle: `&space_bspc` (Tap = Space, Shift = Backspace)
@@ -49,7 +49,7 @@ This document captures the design decisions, hardware configurations, and layout
     - With Shift (or sticky shift): Numpad transforms into `F1`–`F12`.
   - Right Grid: Vim HJKL navigation (`LEFT`, `DOWN`, `UP`, `RIGHT`) with `HOME`, `PGDN`, `PGUP`, `END`, and `DEL` on pinky.
   - Media controls: Volume up/down, mute, play/pause, prev/next.
-  - Thumbs on Util: Decimal point `.` on Left Inner, pass-through outer thumbs (`&trans`) for tri-layer, and pass-through `Enter` / `Space` (auto-disarming Numword).
+  - Thumbs on Util: Decimal point `.` on Left Inner, pass-through Left Outer (`&trans`) for tri-layer, `Cmd+Enter` (`&kp LG(RET)`), `Cmd+Space` (`&kp LG(SPACE)`), and `Cmd+Tab` (`&lt 3 LG(TAB)`) on the right thumbs, plus `Space + Tab` chord for ``Cmd + ` `` (`&kp LG(GRAVE)`).
 - **Layer 3: UTILITY (Right Trigger)**:
   - Mirrors Layer 2.
 - **Layer 4: SYSTEM (Hold Both Esc + Tab Thumbs)**:
